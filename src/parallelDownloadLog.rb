@@ -8,7 +8,7 @@ def findRepository(repoName)
     client = Travis::Client.new 
     repository=client.repo(repoName)
   rescue
-    puts &!
+    puts $!
     client.clear_cache!
     repository=nil
     i+=1
@@ -23,7 +23,7 @@ def getLastBuildNumber(repository)
   begin
     lastBuildNumber=repository.last_build.number
   rescue
-    puts &!
+    puts $!
     lastBuildNumber=nil
     i+=1
     sleep 60
@@ -37,7 +37,7 @@ def getBuild(repository,number)
   begin
     build=repository.build(number)
   rescue
-    puts &!
+    puts $!
     build=nil
     sleep 60
     i+=1
