@@ -23,6 +23,7 @@ def getLastBuildNumber(repository)
   begin
     lastBuildNumber=repository.last_build.number
   rescue
+    puts &!
     lastBuildNumber=nil
     i+=1
     sleep 60
@@ -36,6 +37,7 @@ def getBuild(repository,number)
   begin
     build=repository.build(number)
   rescue
+    puts &!
     build=nil
     sleep 60
     i+=1
@@ -49,6 +51,7 @@ def getLog(job)
   begin
     log=job.log.body
   rescue
+    puts &!
     log=nil
     sleep 60
     i+=1
@@ -75,8 +78,9 @@ def getRepositoryLog(repo)
       puts name
       next if File.exist?(name)&&(File.size?(name)!=nil)    
       File.open(name,'w') do |file|
-        log=getLog(job)
+        log=getLog(job)   
         file.write(log)
+        sleep 180
       end
     end
   end
@@ -85,7 +89,7 @@ end
 
 def eachRepository(input_CSV)
   CSV.foreach(input_CSV,headers:false) do |row|
-     getRepositoryLog("#{row[0]}") if row[2].to_i!=0
+     getRepositoryLog("#{row[0]}") if row[2].to_i>=1000
   end
 end
 eachRepository(ARGV[0])
