@@ -3,11 +3,13 @@ require 'travis'
 require 'csv'
 require 'travis/client'
 def findRepository(repoName)
-  i=0
-  client = Travis::Client.new
-  begin  
+  i=0 
+  begin 
+    client = Travis::Client.new 
     repository=client.repo(repoName)
   rescue
+    puts &!
+    client.clear_cache!
     repository=nil
     i+=1
     sleep 60
