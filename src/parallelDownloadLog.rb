@@ -1,10 +1,12 @@
 require 'fileutils'
 require 'travis'
 require 'csv'
-def findRepository(repo)
+require 'travis/client'
+def findRepository(repoName)
   i=0
-  begin
-    repository=Travis::Repository.find(repo)
+  client = Travis::Client.new
+  begin  
+    repository=client.repo(repoName)
   rescue
     repository=nil
     i+=1
