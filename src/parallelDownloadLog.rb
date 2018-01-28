@@ -2,13 +2,14 @@ require 'fileutils'
 require 'travis'
 require 'csv'
 require 'travis/client'
+require 'find'
 def findRepository(repoName)
   i=0 
   begin 
     client = Travis::Client.new 
     repository=client.repo(repoName)
   rescue
-    puts $!
+    puts "findRepository #{$!}"
     client.clear_cache!
     repository=nil
     i+=1
@@ -23,7 +24,7 @@ def getLastBuildNumber(repository)
   begin
     lastBuildNumber=repository.last_build.number
   rescue
-    puts $!
+    puts "getLastBuildNumber #{$!}"
     lastBuildNumber=nil
     i+=1
     sleep 60
@@ -37,7 +38,7 @@ def getBuild(repository,number)
   begin
     build=repository.build(number)
   rescue
-    puts $!
+    puts "getBuild #{$!}"
     build=nil
     sleep 60
     i+=1
@@ -51,13 +52,25 @@ def getLog(job)
   begin
     log=job.log.body
   rescue
-    puts $!
+    puts "getLog #{$!}"
     log=nil
     sleep 60
     i+=1
     retry if i<5
   end
   return log
+end
+
+def getExistLargestBuildNumber(parent_dir)
+  max=1
+  Find.find(parent_dir) do |path|
+    match=/\d+@/.match(path)
+    temp=match[0][0..-2].to_i if match
+    if temp&&temp>max
+      max=temp
+    end
+  end
+  max
 end
 
 def getRepositoryLog(repo)
@@ -70,7 +83,8 @@ def getRepositoryLog(repo)
   return unless lastBuildNumber
   return if lastBuildNumber.to_i<1000
   FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
-  for i in 1..lastBuildNumber.to_i
+  firstBuildNumber=getExistLargestBuildNumber(parent_dir)
+  for i in firstBuildNumber..lastBuildNumber.to_i
     build=getBuild(repository,i)
     next unless build
     build.jobs.each do |job|
@@ -80,7 +94,6 @@ def getRepositoryLog(repo)
       File.open(name,'w') do |file|
         log=getLog(job)   
         file.write(log)
-        sleep 180
       end
     end
   end
