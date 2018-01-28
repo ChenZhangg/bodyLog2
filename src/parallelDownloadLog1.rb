@@ -1,6 +1,6 @@
 require 'fileutils'
 require 'travis'
-
+require 'csv'
 
 def getRepositoryLog(repo)
   parent_dir=File.join('..','build_logs',repo.gsub(/\//,'@'))
