@@ -51,7 +51,7 @@ def getLog(job)
   begin
     log=job.log.body
   rescue
-    puts &!
+    puts $!
     log=nil
     sleep 60
     i+=1
