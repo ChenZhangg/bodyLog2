@@ -47,6 +47,20 @@ def getBuild(repository,number)
   return build
 end
 
+def getJobs(build)
+  i=0
+  begin
+    jobs=build.jobs
+  rescue
+    puts "getJobs #{$!}"
+    jobs=nil
+    sleep 60
+    i+=1
+    retry if i<5
+  end
+  return jobs
+end
+
 def getLog(job)
   i=0
   begin
@@ -75,7 +89,6 @@ end
 
 def getRepositoryLog(repo)
   parent_dir=File.join('..','build_logs',repo.gsub(/\//,'@'))
-  #return if File.exist?(@parent_dir)
   
   repository=findRepository(repo)
   return unless repository
@@ -87,7 +100,9 @@ def getRepositoryLog(repo)
   for i in firstBuildNumber..lastBuildNumber.to_i
     build=getBuild(repository,i)
     next unless build
-    build.jobs.each do |job|
+    jobs=getJobs(build)
+    next unless jobs
+    jobs.each do |job|
       name=File.join(parent_dir, "#{job.number.gsub(/\./,'@')}.log")
       puts name
       next if File.exist?(name)&&(File.size?(name)!=nil)    
