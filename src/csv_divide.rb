@@ -1,28 +1,32 @@
 require 'csv'
-def csv_traverse(csv_file)
-  row_number=0
-  CSV.foreach(csv_file,headers:true,col_sep:',') do |row|
-    row_number+=1
-  end
-  row_count=0
-  CSV.foreach(csv_file,headers:true,col_sep:',') do |row|
-    row_count+=1
-    if row_count<=row_number/5
-      i=0
-    elsif row_count<=row_number*2/5
-      i=1
-    elsif row_count<=row_number*3/5
-      i=2
-    elsif row_count<=row_number*4/5
-      i=3
-    else
-      i=4
+require 'mysql2'
+require 'find'
+def scanCSV(csv_file)
+  File.foreach(csv_file) do |csv_line|
+    begin
+    row = CSV.parse(csv_line.gsub('\"', '""')).first
+    rescue
+      puts $!
+      next
     end
-    File.open("repo#{i}.csv",'a+') do |file|
+    next if row[5].to_s != 'Java'
+    puts "#{row[1]}                       #{row[5]}"
+    File.open("test.csv",'a+') do |file|
       CSV(file,col_sep:',') do |csv|
-        csv<<[row[0],row[1],row[2]]
+        csv<<[row[1],row[1][29..-1]]
       end
     end
   end
 end
-csv_traverse('repoAbove1000WithTravis.csv')
+Find.find('projects') do |f|
+  if File.file?(f) && f=~/.*\/x.*/
+    scanCSV(f)
+  end
+end
+#csv_traverse('repoAbove1000WithTravis.csv')
+
+#test('/home/zc/Downloads/xzaey')
+#test('/home/zc/Downloads/projects.csv')
+#r=SmarterCSV.process('/home/zc/Downloads/projects.csv',{:row_sep => :auto,:auto_row_sep_chars => 500,:chunk_size => 2,
+#                      :headers_in_file => false,:user_provided_headers => [:id,:url,:owner_id,:name,:description,:language,:created_at,:forked_from,:deleted,:updated_at]})
+#puts r

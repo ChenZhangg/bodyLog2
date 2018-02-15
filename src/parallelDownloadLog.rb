@@ -70,7 +70,7 @@ def getLog(job)
     log=nil
     sleep 60
     i+=1
-    retry if i<5
+    retry if i<3
   end
   return log
 end
@@ -102,14 +102,18 @@ def getRepositoryLog(repo)
     next unless build
     jobs=getJobs(build)
     next unless jobs
-    jobs.each do |job|
-      name=File.join(parent_dir, "#{job.number.gsub(/\./,'@')}.log")
-      puts name
-      next if File.exist?(name)&&(File.size?(name)!=nil)    
-      File.open(name,'w') do |file|
-        log=getLog(job)   
-        file.write(log)
+    begin
+      jobs.each do |job|
+        name=File.join(parent_dir, "#{job.number.gsub(/\./,'@')}.log")
+        puts name
+        next if File.exist?(name)&&(File.size?(name)!=nil)
+        File.open(name,'w') do |file|
+          log=getLog(job)
+          file.write(log)
+        end
       end
+    rescue
+      puts "jobs.each #{$!}"
     end
   end
 
