@@ -42,9 +42,9 @@ def downloadJob(job,job_number)
   rescue => e
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
     puts error_message
-    sleep 60
+    sleep 20
     count+=1
-    retry if count<10
+    retry if count<5
   end
 end
 
@@ -59,9 +59,9 @@ def jobLogs(jobs)
     rescue => e
       error_message = "Retrying, fail to download job log #{url}: #{e.message}"
       puts error_message
-      sleep 60
+      sleep 20
       count+=1
-      retry if count<10
+      retry if count<5
     end
   end
 end
@@ -83,9 +83,9 @@ def paginateBuild(last_build_number,repo_id)
   rescue  Exception => e
     error_message = "Retrying, but Error paginating Travis build #{last_build_number}: #{e.message}"
     puts error_message
-    sleep 60
+    sleep 20
     count+=1
-    retry if count<10
+    retry if count<5
   end
 
 end
@@ -128,9 +128,9 @@ def getTravis(repo)
   rescue Exception => e
     error_message = "Retrying, but Error getting Travis builds for #{repo}: #{e.message}"
     puts error_message
-    sleep 60
+    sleep 20
     count+=1
-    retry if count<10
+    retry if count<5
   end
 
 end
