@@ -29,7 +29,8 @@ end
 =end
 def downloadJob(job,job_number)
   name=File.join(@parent_dir, "#{job_number.gsub(/\./,'@')}.log")
-  job_log_url="http://api.travis-ci.org/jobs/#{job}/log"
+  #job_log_url="http://api.travis-ci.org/jobs/#{job}/log"
+  job_log_url="http://s3.amazonaws.com/archive.travis-ci.org/jobs/#{job}/log.txt"
   return if File.exist?(name)&&(File.size?(name)!=nil)
   puts name
   count=0
