@@ -142,5 +142,5 @@ def eachRepository(input_CSV)
     getTravis("#{row[0]}") if row[2].to_i>=1000
   end
 end
-#eachRepository(ARGV[0])
-eachRepository('repo0')
+eachRepository(ARGV[0])
+#eachRepository('repo0')
