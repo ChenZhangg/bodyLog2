@@ -42,6 +42,7 @@ def downloadJob(job,job_number)
     end
   rescue => e
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
+    job_log_url="http://api.travis-ci.org/jobs/#{job}/log" if e.message.include?('403')
     puts error_message
     sleep 20
     count+=1
@@ -141,5 +142,5 @@ def eachRepository(input_CSV)
     getTravis("#{row[0]}") if row[2].to_i>=1000
   end
 end
-eachRepository(ARGV[0])
-
+#eachRepository(ARGV[0])
+eachRepository('repo0')
