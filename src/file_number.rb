@@ -6,6 +6,7 @@ def mavenOrGradle(log_file_path)
   if f.include?(@maven_error_message) || f.include?(@gradle_error_message)
     puts log_file_path
     @count+=1
+    puts @count
   end
 
 end
