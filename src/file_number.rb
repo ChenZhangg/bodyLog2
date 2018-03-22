@@ -28,6 +28,7 @@ def traverseDir(build_logs_path)
     end
     puts "Projects #{repo_path} has #{@count_one_project} compiler error files"
     @count_projects+=1 if @count_one_project>0
+    puts "#{repo_path} don't have compiler error files" if @count_one_project==0
     puts "There are #{@count_projects} projects have compiler error"
   end
 end
