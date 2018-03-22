@@ -1,10 +1,12 @@
 @maven_error_message='COMPILATION ERROR'
 @gradle_error_message='Compilation failed'
+@file_number=0
 @count=0
 @count_one_project=0
 @count_projects=0
 def mavenOrGradle(log_file_path)
   f=IO.read log_file_path
+  @file_number+=1
   if f.include?(@maven_error_message) || f.include?(@gradle_error_message)
     puts log_file_path
     @count+=1
@@ -26,10 +28,11 @@ def traverseDir(build_logs_path)
     end
     puts "Projects #{repo_path} has #{@count_one_project} compiler error files"
     @count_projects+=1 if @count_one_project>0
-    puts "There are #{@count_projects} projects have compiler"
+    puts "There are #{@count_projects} projects have compiler error"
   end
 end
 
 @build_logs_path='../build_logs/'
 traverseDir(@build_logs_path)
 puts "There are #{@count} bad files in total."
+puts "There are #{@file_number} files in total."
