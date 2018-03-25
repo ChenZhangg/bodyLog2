@@ -158,7 +158,7 @@ def insertData(hash)
   end
 end
 
-CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4')
+CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true)
 CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
 CLIENT.query('USE zc')
 CLIENT.query('ALTER Table zc.travis0 CONVERT TO CHARACTER SET utf8;')
