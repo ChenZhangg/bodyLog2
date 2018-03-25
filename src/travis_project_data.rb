@@ -12,7 +12,7 @@ def getJob(job_id,hash,parent_dir)
     j= JSON.parse f.read
   rescue
     puts "Failed to get the job at #{url}: #{$!}"
-    retry
+    #retry
   end
   hash[:job_id]=j['id']
   hash[:job_allow_failure]=j['allow_failure']
@@ -39,7 +39,7 @@ def getBuild(build_id,hash,parent_dir)
     j= JSON.parse f.read
   rescue
     puts "Failed to get the build at #{url}: #{$!}"
-    retry
+    #retry
   end
   #puts JSON.pretty_generate(j)
   hash[:build_id]=j['id']
