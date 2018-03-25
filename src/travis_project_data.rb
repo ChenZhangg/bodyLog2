@@ -4,7 +4,7 @@ require 'json'
 require 'fileutils'
 require 'mysql2'
 
-
+@mutex=Mutex.new
 def getJob(job_id,hash,parent_dir)
   url="https://api.travis-ci.org/job/#{job_id}"
   begin
@@ -28,7 +28,9 @@ def getJob(job_id,hash,parent_dir)
   File.open(file_name,'w') do |file|
     file.puts(JSON.pretty_generate(j))
   end
-  insertData(hash)
+  @mutex.synchronize do
+    insertData(hash)
+  end
   #puts JSON.pretty_generate(j)
 end
 
@@ -87,8 +89,26 @@ def getBuilds(repo_id,offset,hash,parent_dir)
   #puts JSON.pretty_generate(j)
   next_offset=j['@pagination']['next']['offset'] if j['@pagination']['next']
   builds=j['builds']
+
+  threads=[]
   builds.each do |build|
-    getBuild(build['id'],hash,parent_dir)
+    thr=Thread.new(build['id'],hash.dup) do |id,hash|
+      getBuild(build['id'],hash,parent_dir)
+    end
+    threads<<thr
+  end
+  threads.each { |thr| thr.join }
+
+  flag=true
+  while flag
+    flag=false
+    sleep 1
+    threads.each do |thr|
+      if false!=thr.status
+        flag=true
+        break
+      end
+    end
   end
 
   getBuilds(repo_id,next_offset,hash,parent_dir) if next_offset
@@ -122,19 +142,24 @@ def scanProjectsInCsv(file)
   end
 end
 
-CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4')
-CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
-CLIENT.query('USE zc')
+
 def insertData(hash)
   id=hash[:job_id]
   statement = CLIENT.prepare('INSERT INTO travis0(job_id) VALUES(?);')
   statement.execute(id)
   hash.each do |key,value|
     next if key==:job_id
-    statement = CLIENT.prepare("UPDATE travis0 SET #{key.to_s}=? WHERE job_id=#{id};")
-    statement.execute(value)
+    begin
+      statement = CLIENT.prepare("UPDATE travis0 SET #{key.to_s}=? WHERE job_id=#{id};")
+      statement.execute(value)
+    rescue
+      puts "Failed to insert #{key} : #{value} bacause #{$!}"
+    end
   end
 end
 
-
+CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4')
+CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
+CLIENT.query('USE zc')
+CLIENT.query('ALTER Table zc.travis0 CONVERT TO CHARACTER SET utf8;')
 scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
