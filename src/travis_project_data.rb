@@ -28,6 +28,7 @@ def getJob(job_id,hash,parent_dir)
   File.open(file_name,'w') do |file|
     file.puts(JSON.pretty_generate(j))
   end
+  puts url
   @mutex.synchronize do
     insertData(hash)
   end
