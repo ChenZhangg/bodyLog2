@@ -144,6 +144,15 @@ def scanProjectsInCsv(file)
 end
 
 
+def insertData(hash)""
+  begin
+    statement = CLIENT.prepare("INSERT INTO travis0(#{hash.keys.collect{|key| key.to_s}.join(',')} VALUES(#{hash.values.join(',')}");
+    statement.execute(value)
+  rescue
+    puts "Failed to insert data bacause #{$!}"
+  end
+end
+=begin
 def insertData(hash)
   id=hash[:job_id]
   statement = CLIENT.prepare('INSERT INTO travis0(job_id) VALUES(?);')
@@ -158,6 +167,7 @@ def insertData(hash)
     end
   end
 end
+=end
 
 CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
 CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
