@@ -46,7 +46,7 @@ def getBuild(build_id,hash,parent_dir)
   end
   #puts JSON.pretty_generate(j)
   hash[:build_id]=j['id']
-  hash[:build_number]=j['number']
+  hash[:build_number]=j['number'].to_i
   hash[:build_state]=j['state']
   hash[:build_duration]=j['duration']
   hash[:build_event_type]=j['event_type']
@@ -55,7 +55,7 @@ def getBuild(build_id,hash,parent_dir)
   hash[:build_started_at]=j['started_at']
   hash[:build_finished_at]=j['finished_at']
   hash[:branch]=j['branch']['name']
-  hash[:tag]=j['tag']
+  hash[:tag]=j['tag']?j['tag']['name']:nil
   hash[:commit_id]=j['commit']['id']
   hash[:commit_sha]=j['commit']['sha']
   hash[:commit_ref]=j['commit']['id']
@@ -144,16 +144,39 @@ def scanProjectsInCsv(file)
 end
 
 
-def insertData(hash)""
+def insertData(hash)
+  values=hash.values.collect do |value|
+    if value && value.is_a?(Integer)
+      value
+    elsif value && is_a?(Float)
+      value
+    elsif value
+      "\'#{CLIENT.escape(value)}\'"
+    else
+      'NULL'
+    end
+  end
+
   begin
-    statement = CLIENT.prepare("INSERT INTO travis0(#{hash.keys.collect{|key| key.to_s}.join(',')} VALUES(#{hash.values.join(',')}");
-    statement.execute(value)
+    statement = CLIENT.prepare("INSERT INTO travis0(#{hash.keys.collect{|key| key.to_s}.join(',')}) VALUES(#{values.join(',')});");
+    statement.execute()
   rescue
     puts "Failed to insert data bacause #{$!}"
   end
 end
 =begin
 def insertData(hash)
+values=hash.values.collect do |value|
+    if value && value.is_a?(Integer)
+      value
+    elsif value && is_a?(Float)
+      value
+    elsif value
+      "\'#{CLIENT.escape(value)}\'"
+    else
+      'NULL'
+    end
+  end
   id=hash[:job_id]
   statement = CLIENT.prepare('INSERT INTO travis0(job_id) VALUES(?);')
   statement.execute(id)
@@ -168,6 +191,7 @@ def insertData(hash)
   end
 end
 =end
+#CLIENT = Mysql2::Client.new(:host => '10.131.252.160', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
 
 CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
 CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
