@@ -54,16 +54,26 @@ def getBuild(build_id,hash,parent_dir)
   hash[:pull_request_number]=j['pull_request_number']
   hash[:build_started_at]=j['started_at']
   hash[:build_finished_at]=j['finished_at']
-  hash[:branch]=j['branch']['name']
+  hash[:branch]=j['branch']?j['branch']['name']:nil
   hash[:tag]=j['tag']?j['tag']['name']:nil
-  hash[:commit_id]=j['commit']['id']
-  hash[:commit_sha]=j['commit']['sha']
-  hash[:commit_ref]=j['commit']['id']
-  hash[:commit_message]=j['commit']['message']
-  hash[:commit_compare_url]=j['commit']['compare_url']
-  hash[:commit_committed_at]=j['commit']['committed_at']
-  hash[:created_id]=j['created_by']['id']
-  hash[:created_login]=j['created_by']['login']
+
+  if j['commit']
+    hash[:commit_id]=j['commit']['id']
+    hash[:commit_sha]=j['commit']['sha']
+    hash[:commit_ref]=j['commit']['id']
+    hash[:commit_message]=j['commit']['message']
+    hash[:commit_compare_url]=j['commit']['compare_url']
+    hash[:commit_committed_at]=j['commit']['committed_at']
+  else
+    hash[:commit_id]=nil
+    hash[:commit_sha]=nil
+    hash[:commit_ref]=nil
+    hash[:commit_message]=nil
+    hash[:commit_compare_url]=nil
+    hash[:commit_committed_at]=nil
+  end
+  hash[:created_id]=j['created_by']?j['created_by']['id']:nil
+  hash[:created_login]=j['created_by']?j['created_by']['login']:nil
   hash[:build_updated_at]=j['updated_at']
 
   file_name=File.join(parent_dir, "build@#{j['number']}.json")
