@@ -4,7 +4,7 @@ require 'json'
 require 'fileutils'
 require 'mysql2'
 
-@mutex=Mutex.new
+#@mutex=Mutex.new
 def getJob(job_id,hash,parent_dir)
   url="https://api.travis-ci.org/job/#{job_id}"
   begin
@@ -25,13 +25,16 @@ def getJob(job_id,hash,parent_dir)
   hash[:job_updated_at]=j['updated_at']
 
   file_name=File.join(parent_dir, "job@#{j['number'].sub(/\./,'@')}.json")
-  File.open(file_name,'w') do |file|
-    file.puts(JSON.pretty_generate(j))
+
+  unless File.exist?(file_name)&&(File.size?(file_name)!=nil)
+    File.open(file_name,'w') do |file|
+      file.puts(JSON.pretty_generate(j))
+    end
   end
   puts url
-  @mutex.synchronize do
-    insertData(hash)
-  end
+  #@mutex.synchronize do
+  #  insertData(hash)
+  #end
   #puts JSON.pretty_generate(j)
 end
 
@@ -76,9 +79,13 @@ def getBuild(build_id,hash,parent_dir)
   hash[:created_login]=j['created_by']?j['created_by']['login']:nil
   hash[:build_updated_at]=j['updated_at']
 
+
   file_name=File.join(parent_dir, "build@#{j['number']}.json")
-  File.open(file_name,'w') do |file|
-    file.puts(JSON.pretty_generate(j))
+
+  unless File.exist?(file_name)&&(File.size?(file_name)!=nil)
+    File.open(file_name,'w') do |file|
+      file.puts(JSON.pretty_generate(j))
+    end
   end
 
   jobs=j['jobs']
@@ -101,6 +108,11 @@ def getBuilds(repo_id,offset,hash,parent_dir)
   next_offset=j['@pagination']['next']['offset'] if j['@pagination']['next']
   builds=j['builds']
 
+  loop do
+    count=Thread.list.count{|thread| thread.alive? }
+    break if Thread.list.count{|thread| thread.alive? } <= 50
+  end
+
   threads=[]
   builds.each do |build|
     thr=Thread.new(build['id'],hash.dup) do |id,hash|
@@ -110,6 +122,7 @@ def getBuilds(repo_id,offset,hash,parent_dir)
   end
   threads.each { |thr| thr.join }
 
+=begin
   flag=true
   while flag
     flag=false
@@ -121,6 +134,7 @@ def getBuilds(repo_id,offset,hash,parent_dir)
       end
     end
   end
+=end
 
   getBuilds(repo_id,next_offset,hash,parent_dir) if next_offset
 end
@@ -174,37 +188,11 @@ def insertData(hash)
     puts "Failed to insert data bacause #{$!}"
   end
 end
-=begin
-def insertData(hash)
-values=hash.values.collect do |value|
-    if value && value.is_a?(Integer)
-      value
-    elsif value && is_a?(Float)
-      value
-    elsif value
-      "\'#{CLIENT.escape(value)}\'"
-    else
-      'NULL'
-    end
-  end
-  id=hash[:job_id]
-  statement = CLIENT.prepare('INSERT INTO travis0(job_id) VALUES(?);')
-  statement.execute(id)
-  hash.each do |key,value|
-    next if key==:job_id
-    begin
-      statement = CLIENT.prepare("UPDATE travis0 SET #{key.to_s}=? WHERE job_id=#{id};")
-      statement.execute(value)
-    rescue
-      puts "Failed to insert #{key} : #{value} bacause #{$!}"
-    end
-  end
-end
-=end
+
 #CLIENT = Mysql2::Client.new(:host => '10.131.252.160', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
 
-CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
-CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
-CLIENT.query('USE zc')
-CLIENT.query('ALTER Table zc.travis0 CONVERT TO CHARACTER SET utf8;')
+#CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
+#CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
+#CLIENT.query('USE zc')
+#CLIENT.query('ALTER Table zc.travis0 CONVERT TO CHARACTER SET utf8;')
 scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
