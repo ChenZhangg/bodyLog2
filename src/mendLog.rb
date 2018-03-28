@@ -38,11 +38,11 @@ def downloadJob(job_id,parent_dir)
     end
   rescue => e
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
-    job_log_url="http://api.travis-ci.org/job/#{job_id}/log" if e.message.include?('403')
+    job_log_url="http://api.travis-ci.org/job/#{job_id}/log" # if e.message.include?('403')
     puts error_message
     sleep 5
     count+=1
-    retry if count<3
+    retry if count<2
   end
 end
 
@@ -140,7 +140,7 @@ def getRepoId(repo_name)
     threads<<thr
     loop do
       count=Thread.list.count{|thread| thread.alive? }
-      break if count <= 10
+      break if count <= 20
     end
   end
   threads.each do |thr|
@@ -154,5 +154,5 @@ def eachRepository(input_CSV)
   end
 end
 
-#eachRepository('Above1000WithTravisAbove1000.csv')
-puts open('http://s3.amazonaws.com/archive.travis-ci.org/jobs/37569269/log.txt').read
+eachRepository('Above1000WithTravisAbove1000.csv')
+#puts open('http://s3.amazonaws.com/archive.travis-ci.org/jobs/37569269/log.txt').read
