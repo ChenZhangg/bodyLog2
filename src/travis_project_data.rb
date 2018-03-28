@@ -32,6 +32,7 @@ def getJob(job_id,hash,parent_dir)
     end
   end
   puts url
+
   #@mutex.synchronize do
   #  insertData(hash)
   #end
@@ -115,7 +116,8 @@ def getBuilds(repo_id,offset,hash,parent_dir)
 
   threads=[]
   builds.each do |build|
-    thr=Thread.new(build['id'],hash.dup) do |id,hash|
+    #thr=Thread.new(build['id'],hash.dup) do |id,hash|
+    thr=Thread.new(build['id']) do |id|
       getBuild(build['id'],hash,parent_dir)
     end
     threads<<thr
