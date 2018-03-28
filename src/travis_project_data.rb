@@ -101,7 +101,7 @@ def getBuilds(repo_id,offset,hash,parent_dir)
     f=open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
     j= JSON.parse f.read
   rescue
-    puts "Failed to get the repo builds list of #{repo_name} at #{url}: #{$!}"
+    puts "Failed to get the repo builds list at #{url}: #{$!}"
     retry
   end
   #puts JSON.pretty_generate(j)
