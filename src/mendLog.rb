@@ -40,9 +40,9 @@ def downloadJob(job_id,parent_dir)
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
     job_log_url="http://api.travis-ci.org/jobs/#{job_id}/log" if e.message.include?('403')
     puts error_message
-    sleep 20
+    sleep 5
     count+=1
-    retry if count<5
+    retry if count<3
   end
 end
 
@@ -140,7 +140,7 @@ def getRepoId(repo_name)
     threads<<thr
     loop do
       count=Thread.list.count{|thread| thread.alive? }
-      break if count <= 200
+      break if count <= 10
     end
   end
   threads.each do |thr|
