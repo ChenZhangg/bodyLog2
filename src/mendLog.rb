@@ -23,14 +23,22 @@ def downloadJob(job_id,parent_dir)
 
   count=0
   begin
-    open(job_log_url) do |f|
-      File.open(file_name,'w') do |file|
-        file.puts(f.read)
+    if job_log_url.include?('amazonaws')
+      open(job_log_url) do |f|
+        File.open(file_name,'w') do |file|
+          file.puts(f.read)
+        end
+      end
+    else
+      open(job_log_url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') do |f|
+        File.open(file_name,'w') do |file|
+          file.puts(f.read)
+        end
       end
     end
   rescue => e
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
-    job_log_url="http://api.travis-ci.org/jobs/#{job}/log" if e.message.include?('403')
+    job_log_url="http://api.travis-ci.org/jobs/#{job_id}/log" if e.message.include?('403')
     puts error_message
     sleep 20
     count+=1
