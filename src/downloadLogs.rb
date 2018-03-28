@@ -139,7 +139,7 @@ end
 
 def eachRepository(input_CSV)
   CSV.foreach(input_CSV,headers:false) do |row|
-    getTravis("#{row[0]}") if row[2].to_i>=1000
+    getTravis("#{row[0]}") #if row[2].to_i>=1000
   end
 end
 eachRepository(ARGV[0])

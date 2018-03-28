@@ -2,7 +2,7 @@ require 'csv'
 require 'open-uri'
 require 'json'
 require 'fileutils'
-require 'mysql2'
+
 
 #@mutex=Mutex.new
 def getJob(job_id,hash,parent_dir)
@@ -160,7 +160,7 @@ def scanProjectsInCsv(file)
   flag=true
   CSV.foreach(file) do |row|
     repo_name=row[0]
-    flag=false  if repo_name.include?('selenium')
+    flag=false  if repo_name.include?('presto')
     next if flag
     parent_dir=File.join('..','json_files',repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
