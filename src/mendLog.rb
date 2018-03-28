@@ -132,7 +132,7 @@ def getRepoId(repo_name)
     threads<<thr
     loop do
       count=Thread.list.count{|thread| thread.alive? }
-      break if count <= 50
+      break if count <= 200
     end
   end
   threads.each do |thr|
