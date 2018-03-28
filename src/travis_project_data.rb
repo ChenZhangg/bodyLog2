@@ -110,7 +110,7 @@ def getBuilds(repo_id,offset,hash,parent_dir)
 
   loop do
     count=Thread.list.count{|thread| thread.alive? }
-    break if Thread.list.count{|thread| thread.alive? } <= 50
+    break if count <= 50
   end
 
   threads=[]
