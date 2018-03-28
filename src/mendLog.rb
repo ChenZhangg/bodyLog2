@@ -20,7 +20,7 @@ def downloadJob(job_id,parent_dir)
   p file_name
   return if File.exist?(file_name) && File.size(file_name)>150
   job_log_url="http://s3.amazonaws.com/archive.travis-ci.org/jobs/#{job_id}/log.txt"
-
+  p job_log_url
   count=0
   begin
     if job_log_url.include?('amazonaws')
@@ -30,7 +30,7 @@ def downloadJob(job_id,parent_dir)
         end
       end
     else
-      open(job_log_url) do |f|
+      open(job_log_url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ','Accept'=> 'text/plain') do |f|
         File.open(file_name,'w') do |file|
           file.puts(f.read)
         end
@@ -38,7 +38,7 @@ def downloadJob(job_id,parent_dir)
     end
   rescue => e
     error_message = "Retrying, fail to download job log #{job_log_url}: #{e.message}"
-    job_log_url="http://api.travis-ci.org/jobs/#{job_id}/log" if e.message.include?('403')
+    job_log_url="http://api.travis-ci.org/job/#{job_id}/log" if e.message.include?('403')
     puts error_message
     sleep 5
     count+=1
@@ -154,4 +154,5 @@ def eachRepository(input_CSV)
   end
 end
 
-eachRepository('Above1000WithTravisAbove1000.csv')
+#eachRepository('Above1000WithTravisAbove1000.csv')
+puts open('http://s3.amazonaws.com/archive.travis-ci.org/jobs/37569269/log.txt').read

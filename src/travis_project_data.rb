@@ -122,20 +122,6 @@ def getBuilds(repo_id,offset,hash,parent_dir)
   end
   threads.each { |thr| thr.join }
 
-=begin
-  flag=true
-  while flag
-    flag=false
-    sleep 1
-    threads.each do |thr|
-      if false!=thr.status
-        flag=true
-        break
-      end
-    end
-  end
-=end
-
   getBuilds(repo_id,next_offset,hash,parent_dir) if next_offset
 end
 
