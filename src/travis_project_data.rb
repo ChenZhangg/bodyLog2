@@ -12,7 +12,7 @@ def getJob(job_id,hash,parent_dir)
     j= JSON.parse f.read
   rescue
     puts "Failed to get the job at #{url}: #{$!}"
-    #retry
+    retry
   end
   hash[:job_id]=j['id']
   hash[:job_allow_failure]=j['allow_failure']
@@ -45,7 +45,7 @@ def getBuild(build_id,hash,parent_dir)
     j= JSON.parse f.read
   rescue
     puts "Failed to get the build at #{url}: #{$!}"
-    #retry
+    retry
   end
   #puts JSON.pretty_generate(j)
   hash[:build_id]=j['id']
@@ -157,8 +157,11 @@ def getRepoID(repo_name,hash,parent_dir)
 end
 
 def scanProjectsInCsv(file)
+  flag=true
   CSV.foreach(file) do |row|
     repo_name=row[0]
+    flag=false  if repo_name.include?('selenium')
+    next if flag
     parent_dir=File.join('..','json_files',repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
     hash=Hash.new
