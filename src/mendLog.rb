@@ -30,7 +30,7 @@ def downloadJob(job_id,parent_dir)
         end
       end
     else
-      open(job_log_url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') do |f|
+      open(job_log_url) do |f|
         File.open(file_name,'w') do |file|
           file.puts(f.read)
         end
