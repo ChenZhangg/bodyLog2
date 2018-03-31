@@ -1,0 +1,9 @@
+nohup: ignoring input
+NameError: undefined local variable or method `repo_name' for main:Object
+  block in eachRepository at mendLog.rb:154
+                     each at /home/fdse/.rvm/rubies/jruby-9.1.13.0/lib/ruby/stdlib/csv.rb:1748
+         block in foreach at /home/fdse/.rvm/rubies/jruby-9.1.13.0/lib/ruby/stdlib/csv.rb:1131
+                     open at /home/fdse/.rvm/rubies/jruby-9.1.13.0/lib/ruby/stdlib/csv.rb:1282
+                  foreach at /home/fdse/.rvm/rubies/jruby-9.1.13.0/lib/ruby/stdlib/csv.rb:1130
+           eachRepository at mendLog.rb:153
+                   <main> at mendLog.rb:160

@@ -3,4 +3,5 @@
 /.idea
 /json_files
 .DS_Store
+.output
 *~

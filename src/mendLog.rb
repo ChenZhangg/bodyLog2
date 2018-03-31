@@ -151,7 +151,7 @@ end
 def eachRepository(input_CSV)
   flag=true
   CSV.foreach(input_CSV,headers:false) do |row|
-    flag=false  if repo_name.include?('CellularPrivacy')
+    flag=false  if row[0].include?('CellularPrivacy')
     next if flag
     getRepoId("#{row[0]}") #if row[2].to_i>=1000
   end
