@@ -3,9 +3,7 @@ require 'open-uri'
 require 'json'
 require 'fileutils'
 
-
-#@mutex=Mutex.new
-def getJob(job_id,hash,parent_dir)
+def getJob(job_id,parent_dir)
   url="https://api.travis-ci.org/job/#{job_id}"
   begin
     f=open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
@@ -14,15 +12,6 @@ def getJob(job_id,hash,parent_dir)
     puts "Failed to get the job at #{url}: #{$!}"
     retry
   end
-  hash[:job_id]=j['id']
-  hash[:job_allow_failure]=j['allow_failure']
-  hash[:job_number]=j['number']
-  hash[:job_state]=j['state']
-  hash[:job_started_at]=j['started_at']
-  hash[:job_finished_at]=j['finished_at']
-  hash[:job_queue]=j['queue']
-  hash[:job_created_at]=j['created_at']
-  hash[:job_updated_at]=j['updated_at']
 
   file_name=File.join(parent_dir, "job@#{j['number'].sub(/\./,'@')}.json")
 
@@ -31,15 +20,10 @@ def getJob(job_id,hash,parent_dir)
       file.puts(JSON.pretty_generate(j))
     end
   end
-  puts url
-
-  #@mutex.synchronize do
-  #  insertData(hash)
-  #end
-  #puts JSON.pretty_generate(j)
+  puts "#Download from #{url} to #{file_name}"
 end
 
-def getBuild(build_id,hash,parent_dir)
+def getBuild(build_id,parent_dir)
   url="https://api.travis-ci.org/build/#{build_id}"
   begin
     f=open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
@@ -49,37 +33,6 @@ def getBuild(build_id,hash,parent_dir)
     retry
   end
   #puts JSON.pretty_generate(j)
-  hash[:build_id]=j['id']
-  hash[:build_number]=j['number'].to_i
-  hash[:build_state]=j['state']
-  hash[:build_duration]=j['duration']
-  hash[:build_event_type]=j['event_type']
-  hash[:pull_request_title]=j['pull_request_title']
-  hash[:pull_request_number]=j['pull_request_number']
-  hash[:build_started_at]=j['started_at']
-  hash[:build_finished_at]=j['finished_at']
-  hash[:branch]=j['branch']?j['branch']['name']:nil
-  hash[:tag]=j['tag']?j['tag']['name']:nil
-
-  if j['commit']
-    hash[:commit_id]=j['commit']['id']
-    hash[:commit_sha]=j['commit']['sha']
-    hash[:commit_ref]=j['commit']['id']
-    hash[:commit_message]=j['commit']['message']
-    hash[:commit_compare_url]=j['commit']['compare_url']
-    hash[:commit_committed_at]=j['commit']['committed_at']
-  else
-    hash[:commit_id]=nil
-    hash[:commit_sha]=nil
-    hash[:commit_ref]=nil
-    hash[:commit_message]=nil
-    hash[:commit_compare_url]=nil
-    hash[:commit_committed_at]=nil
-  end
-  hash[:created_id]=j['created_by']?j['created_by']['id']:nil
-  hash[:created_login]=j['created_by']?j['created_by']['login']:nil
-  hash[:build_updated_at]=j['updated_at']
-
 
   file_name=File.join(parent_dir, "build@#{j['number']}.json")
 
@@ -89,45 +42,48 @@ def getBuild(build_id,hash,parent_dir)
     end
   end
 
+  puts "#Download from #{url} to #{file_name}"
+
   jobs=j['jobs']
   jobs.each do |job|
-    getJob(job['id'],hash,parent_dir)
+    getJob(job['id'],parent_dir)
   end
 
 end
 
-def getBuilds(repo_id,offset,hash,parent_dir)
-  url="https://api.travis-ci.org/repo/#{repo_id}/builds?limit=25&offset=#{offset}"
-  begin
-    f=open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
-    j= JSON.parse f.read
-  rescue
-    puts "Failed to get the repo builds list at #{url}: #{$!}"
-    retry
-  end
-  #puts JSON.pretty_generate(j)
-  next_offset=j['@pagination']['next']['offset'] if j['@pagination']['next']
-  builds=j['builds']
-
-  loop do
-    count=Thread.list.count{|thread| thread.alive? }
-    break if count <= 50
-  end
-
+def getBuilds(repo_id,offset,parent_dir)
   threads=[]
-  builds.each do |build|
-    #thr=Thread.new(build['id'],hash.dup) do |id,hash|
-    thr=Thread.new(build['id']) do |id|
-      getBuild(build['id'],hash,parent_dir)
+  while offset
+    url="https://api.travis-ci.org/repo/#{repo_id}/builds?limit=25&offset=#{offset}"
+    begin
+      f=open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
+      j= JSON.parse f.read
+    rescue
+      puts "Failed to get the repo builds list at #{url}: #{$!}"
+      retry
     end
-    threads<<thr
-  end
-  threads.each { |thr| thr.join }
+    #puts JSON.pretty_generate(j)
+    offset=j['@pagination']['next']?j['@pagination']['next']['offset']:nil
+    builds=j['builds']
 
-  getBuilds(repo_id,next_offset,hash,parent_dir) if next_offset
+    builds.each do |build|
+      thr=Thread.new(build['id'],parent_dir) do |build_id,parent_dir|
+        getBuild(build_id,parent_dir)
+      end
+      threads<<thr
+      loop do
+        count=Thread.list.count{|thread| thread.alive? }
+        break if count <= 50
+      end
+    end
+    threads.delete_if{|thread| !thread.alive?}
+  end
+  threads.each do |thr|
+    thr.join if thr.alive?
+  end
 end
 
-def getRepoID(repo_name,hash,parent_dir)
+def getRepoID(repo_name,parent_dir)
   repo_slug=repo_name.sub(/\//,'%2F')
   begin
     f=open("https://api.travis-ci.org/repo/#{repo_slug}",'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
@@ -137,10 +93,7 @@ def getRepoID(repo_name,hash,parent_dir)
     retry
   end
   id=j['id']
-  hash[:repo_name]=repo_name
-  hash[:repo_id]=id
-  #p id.class
-  getBuilds(id,0,hash,parent_dir)
+  getBuilds(id,0,parent_dir)
   #puts JSON.pretty_generate(j)
 end
 
@@ -152,38 +105,8 @@ def scanProjectsInCsv(file)
     next if flag
     parent_dir=File.join('..','json_files',repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
-    hash=Hash.new
-    getRepoID(repo_name,hash,parent_dir)
-
+    getRepoID(repo_name,parent_dir)
   end
 end
 
-
-def insertData(hash)
-  values=hash.values.collect do |value|
-    if value && value.is_a?(Integer)
-      value
-    elsif value && is_a?(Float)
-      value
-    elsif value
-      "\'#{CLIENT.escape(value)}\'"
-    else
-      'NULL'
-    end
-  end
-
-  begin
-    statement = CLIENT.prepare("INSERT INTO travis0(#{hash.keys.collect{|key| key.to_s}.join(',')}) VALUES(#{values.join(',')});");
-    statement.execute()
-  rescue
-    puts "Failed to insert data bacause #{$!}"
-  end
-end
-
-#CLIENT = Mysql2::Client.new(:host => '10.131.252.160', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
-
-#CLIENT = Mysql2::Client.new(:host => 'localhost', :username => 'root',:password=>'root',:encoding => 'utf8mb4',:reconnect => true,:connect_timeout=>30)
-#CLIENT.query('ALTER DATABASE zc CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;')
-#CLIENT.query('USE zc')
-#CLIENT.query('ALTER Table zc.travis0 CONVERT TO CHARACTER SET utf8;')
 scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
