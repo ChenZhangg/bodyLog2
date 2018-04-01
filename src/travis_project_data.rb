@@ -101,7 +101,7 @@ def scanProjectsInCsv(file)
   flag=true
   CSV.foreach(file) do |row|
     repo_name=row[0]
-    flag=false  if repo_name.include?('heron')
+    flag=false  if repo_name.include?('apollo')
     next if flag
     parent_dir=File.join('..','json_files',repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
