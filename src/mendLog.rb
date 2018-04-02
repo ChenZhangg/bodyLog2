@@ -120,12 +120,17 @@ def getRepoId(repo_name)
   parent_dir=File.join('..','build_logs',repo_name.gsub(/\//,'@'))
   FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
   repo_slug=repo_name.sub(/\//,'%2F')
+
+  count=0
   begin
     f=open("https://api.travis-ci.org/repo/#{repo_slug}",'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
     j= JSON.parse f.read
   rescue
     puts "Failed to get the repo id of #{repo_name}: #{$!}"
-    retry
+    sleep 5
+    count+=1
+    retry if count<10
+    return
   end
   repo_id=j['id']
   largest_build_number=getLargestBuildNumber(repo_id)
@@ -151,7 +156,7 @@ end
 def eachRepository(input_CSV)
   flag=true
   CSV.foreach(input_CSV,headers:false) do |row|
-    flag=false  if row[0].include?('apollo')
+    flag=false  if row[0].include?('checkstyle')
     next if flag
     getRepoId("#{row[0]}") #if row[2].to_i>=1000
   end

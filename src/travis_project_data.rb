@@ -85,12 +85,16 @@ end
 
 def getRepoID(repo_name,parent_dir)
   repo_slug=repo_name.sub(/\//,'%2F')
+  count=0
   begin
     f=open("https://api.travis-ci.org/repo/#{repo_slug}",'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
     j= JSON.parse f.read
   rescue
     puts "Failed to get the repo id of #{repo_name}: #{$!}"
-    retry
+    sleep 5
+    count+=1
+    retry if count<10
+    return
   end
   id=j['id']
   getBuilds(id,0,parent_dir)
@@ -101,7 +105,7 @@ def scanProjectsInCsv(file)
   flag=true
   CSV.foreach(file) do |row|
     repo_name=row[0]
-    flag=false  if repo_name.include?('apollo')
+    flag=false  if repo_name.include?('tananaev')
     next if flag
     parent_dir=File.join('..','json_files',repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
