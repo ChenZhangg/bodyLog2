@@ -140,12 +140,12 @@ def getRepoId(repo_name)
   s.each do |build_number|
     thr=Thread.new(build_number) do |build_number|
       build_id=getBuildId(repo_id,build_number,nil,largest_build_number)
-      getJobs(build_id,parent_dir)
+      getJobs(build_id,parent_dir) if build_id
     end
     threads<<thr
     loop do
       count=Thread.list.count{|thread| thread.alive? }
-      break if count <= 20
+      break if count <= 10
     end
   end
   threads.each do |thr|
