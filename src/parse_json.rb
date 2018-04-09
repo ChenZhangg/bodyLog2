@@ -9,7 +9,9 @@ class JavaRepoBuildDatum < ActiveRecord::Base
       host:     "10.131.252.160",
       username: "root",
       password: "root",
-      database: "zc"
+      database: "zc",
+      encoding: "utf8mb4",
+      collation: "utf8mb4_unicode_ci"
   )
 end
 
