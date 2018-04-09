@@ -60,7 +60,6 @@ def parse_job_json_file(job_file_path)
   rescue
     puts  $!
     puts job_file_path
-    raise $!
   end
 end
 
@@ -95,9 +94,7 @@ consumer = Thread.new do
     id += 1
     hash = @queue.deq
     break if hash == :END_OF_WORK
-
     hash[:id] = id
-    p hash
     JavaRepoBuildDatum.create hash
     #tjr=JavaRepoBuildDatum.create hash
   end
