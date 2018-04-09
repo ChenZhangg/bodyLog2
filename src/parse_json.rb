@@ -87,12 +87,16 @@ end
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
 
-@queue = Queue.new
+@queue = SizedQueue.new(50)
 consumer = Thread.new do
+  id = 0
   loop do
+    id += 1
     hash = @queue.deq
     break if hash == :END_OF_WORK
+    hash[:id] = id
     JavaRepoBuildDatum.create hash
+    hash = nil
     #tjr=JavaRepoBuildDatum.create hash
   end
 end
