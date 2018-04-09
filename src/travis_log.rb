@@ -49,6 +49,8 @@ def scan_json_files(json_files_path)
     repo_path = File.join(json_files_path, repo_name)
     parent_dir = repo_path.sub(/json_files/, 'build_logs')
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
+
+
     Dir.entries(repo_path).select{ |p| p =~ /job@.+@.+/ }.sort_by!{ |e| e.sub(/job@/,'').sub(/\.json/,'').sub(/@/,'.').to_f }.each do |job_file_name|
       job_file_path = File.join(repo_path, job_file_name)
       thr=Thread.new(job_file_path) do |job_file_path|
