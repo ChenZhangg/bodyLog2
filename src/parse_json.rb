@@ -14,6 +14,7 @@ class JavaRepoBuildDatum < ActiveRecord::Base
 end
 
 def parse_job_json_file(job_file_path)
+  puts job_file_path
   j = JSON.parse IO.read(job_file_path)
   hash = Hash.new
   hash[:repo_name] = j['repository']['slug']
@@ -36,7 +37,7 @@ def parse_job_json_file(job_file_path)
   hash[:commit_committed_at] = j['commit'] ? j['commit']['committed_at'] : nil
 
   build_file_path = job_file_path.sub(/(?<=\/)job(?=@)/, 'build').sub(/(?<=\d)@\d+(?=\.json)/, '')
-
+  puts build_file_path
   j = JSON.parse IO.read(build_file_path)
 
   hash[:build_id] = j['id']
