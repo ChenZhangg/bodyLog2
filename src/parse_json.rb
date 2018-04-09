@@ -64,24 +64,24 @@ def parse_job_json_file(job_file_path)
 end
 
 def scan_json_files(json_files_path)
-  threads = []
+
   Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.each do |repo_name|
     repo_path = File.join(json_files_path, repo_name)
-    Dir.entries(repo_path).select{ |p| p =~ /job@.+@.+/ }.sort_by!{ |e| e.sub(/job@/,'').sub(/\.json/,'').sub(/@/,'.').to_f }.each do |job_file_name|
+    Dir.foreach(repo_path) do |job_file_name|
+      next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
       thr=Thread.new(job_file_path) do |job_file_path|
         parse_job_json_file job_file_path
       end
-      threads<<thr
+
       loop do
         count = Thread.list.count{|thread| thread.alive? }
         break if count <= 50
       end
-      threads.delete_if{ |thread| !thread.alive? }
+
     end
   end
-
-  threads.each{|thread| thread.join if thread.alive?}
+  Thread.list.each{|thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
 Thread.abort_on_exception = true
