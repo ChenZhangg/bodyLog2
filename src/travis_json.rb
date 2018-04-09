@@ -79,7 +79,7 @@ def get_builds_list(repo_id, offset, parent_dir)
       threads << thr
       loop do
         count = Thread.list.count{ |thread| thread.alive? }
-        break if count <= 50
+        break if count <= 200
       end
     end
     threads.delete_if{|thread| !thread.alive?}
