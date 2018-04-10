@@ -8,13 +8,16 @@ require 'activerecord-jdbcmysql-adapter'
 
 def get_job_json(job_id, parent_dir)
   url = "https://api.travis-ci.org/job/#{job_id}"
+  count = 0
   begin
     f = open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
     j= JSON.parse f.read
   rescue
     puts "Failed to get the job at #{url}: #{$!}"
     sleep 20
-    retry
+    count += 1
+    message = $!.message
+    retry if !message.include?('404') && count<50
   end
 
   file_name = File.join(parent_dir, "job@#{j['number'].sub(/\./,'@')}.json")
@@ -57,7 +60,6 @@ def get_build_json(build_id, parent_dir)
 end
 
 def get_builds_list(repo_id, offset, parent_dir)
-  threads = []
   while offset
     url = "https://api.travis-ci.org/repo/#{repo_id}/builds?limit=25&offset=#{offset}"
     begin
@@ -73,20 +75,15 @@ def get_builds_list(repo_id, offset, parent_dir)
     builds = j['builds']
 
     builds.each do |build|
-      thr = Thread.new(build['id']) do |build_id|
+      Thread.new(build['id']) do |build_id|
         get_build_json(build_id, parent_dir)
       end
-      threads << thr
       loop do
-        count = Thread.list.count{ |thread| thread.alive? }
-        break if count <= 200
+        break if Thread.list.count{ |thread| thread.alive? } <= 200
       end
     end
-    threads.delete_if{|thread| !thread.alive?}
   end
-  threads.each do |thr|
-    thr.join if thr.alive?
-  end
+  Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
 def get_repo_id(repo_name, parent_dir)
@@ -99,7 +96,7 @@ def get_repo_id(repo_name, parent_dir)
     puts "Failed to get the repo id of #{repo_name}: #{$!}"
     sleep 20
     count += 1
-    retry if count<10
+    retry if count<50
     return
   end
   id = j['id']
@@ -120,9 +117,13 @@ def scan_csv(file)
 end
 
 def scan_mysql(id, builds, stars)
+  flag = true
   TravisJavaRepository.where("id >= ? AND builds > ? AND stars>?", id, builds, stars).find_each do |e|
     puts "Scan project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
+    flag = false if repo_name.include? 'flori/json'
+    next if flag
+    next if e.builds > 2000 && e.stars > 1000
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
     get_repo_id(repo_name, parent_dir)
@@ -140,5 +141,5 @@ class TravisJavaRepository < ActiveRecord::Base
 end
 
 Thread.abort_on_exception = true
-scan_mysql(1, 50, 0)
+scan_mysql(1, 50, 25)
 #scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
