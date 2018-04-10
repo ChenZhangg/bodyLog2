@@ -63,6 +63,7 @@ def scan_json_files(json_files_path)
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
 
     Dir.foreach(repo_path) do |job_file_name|
+      next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
       Thread.new(job_file_path) do |job_file_path|
         parse_job_json_file job_file_path
