@@ -85,6 +85,12 @@ def get_builds_list(repo_id, offset, parent_dir)
       end
     end
   end
+  loop do
+    p '================'
+    p Thread.current
+    Thread.list.each{ |thread| p thread }
+    sleep 10
+  end
   p "#{parent_dir}  over"
   #Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 end
@@ -103,7 +109,7 @@ def get_repo_id(repo_name, parent_dir)
     return
   end
   id = j['id']
-  get_builds_list(id, 450, parent_dir)
+  get_builds_list(id, 480, parent_dir)
   #puts JSON.pretty_generate(j)
 end
 
