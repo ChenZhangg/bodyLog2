@@ -54,6 +54,7 @@ end
 def scan_json_files(json_files_path)
   flag = true
   Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.sort_by!{ |e| File.mtime(File.join(json_files_path, e)) }.each do |repo_name|
+    puts "Scan project #{repo_name}"
     flag = false if repo_name.include? 'square/okhttp'
     next if flag
 
@@ -77,5 +78,5 @@ end
 
 Thread.abort_on_exception = true
 json_files_path = ARGV[0] || '../json_files'
-p json_files_path
-#scan_json_files(json_files_path)
+
+scan_json_files(json_files_path)
