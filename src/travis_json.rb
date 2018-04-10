@@ -14,12 +14,13 @@ def get_job_json(job_id, parent_dir)
     j= JSON.parse f.read
   rescue
     puts "Failed to get the job at #{url}: #{$!}"
+    j = nil
     sleep 20
     count += 1
     message = $!.message
     retry if !message.include?('404') && count<50
   end
-
+  return unless j
   file_name = File.join(parent_dir, "job@#{j['number'].sub(/\./,'@')}.json")
 
   unless File.exist?(file_name) && File.size?(file_name)!=nil
