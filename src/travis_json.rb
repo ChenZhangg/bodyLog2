@@ -105,29 +105,27 @@ def get_repo_id(repo_name, parent_dir)
 end
 
 def scan_csv(file)
-  flag = true
+  array = []
   CSV.foreach(file) do |row|
-    repo_name = row[0]
-    flag=false  if repo_name.include?('tananaev')
-    next if flag
-    parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
-    FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
-    get_repo_id(repo_name, parent_dir)
+    array << row[0]
   end
+  array
 end
 
 def scan_mysql(id, builds, stars)
+  array = scan_csv('Above1000WithTravisAbove1000.csv')
   flag = true
   TravisJavaRepository.where("id >= ? AND builds > ? AND stars>?", id, builds, stars).find_each do |e|
     puts "Scan project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
     flag = false if repo_name.include? 'flori/json'
     next if flag
-    next if e.builds > 2000 && e.stars > 1000
+    next if array.find_index repo_name
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
     get_repo_id(repo_name, parent_dir)
   end
+
 end
 
 class TravisJavaRepository < ActiveRecord::Base
