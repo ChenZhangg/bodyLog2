@@ -15,11 +15,12 @@ def get_job_json(job_id, parent_dir)
   rescue
     puts "Failed to get the job at #{url}: #{$!}"
     j = nil
-    sleep 20
     count += 1
     message = $!.message
+    sleep 20 if message.include?('429')
     retry if !message.include?('404') && count<50
   end
+
   return unless j
   file_name = File.join(parent_dir, "job@#{j['number'].sub(/\./,'@')}.json")
 
@@ -84,6 +85,7 @@ def get_builds_list(repo_id, offset, parent_dir)
       end
     end
   end
+  p "#{parent_dir}  over"
   Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
@@ -101,7 +103,7 @@ def get_repo_id(repo_name, parent_dir)
     return
   end
   id = j['id']
-  get_builds_list(id, 0, parent_dir)
+  get_builds_list(id, 300, parent_dir)
   #puts JSON.pretty_generate(j)
 end
 

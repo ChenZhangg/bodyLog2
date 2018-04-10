@@ -8,3 +8,4 @@ url = "https://api.travis-ci.org/job/38171"
 regexp = /"number": "([.\d]+)"/
 p regexp =~ ' "435.1"'
 p $1
+Thread.list.each { |thread| p thread}
