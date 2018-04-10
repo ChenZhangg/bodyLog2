@@ -77,7 +77,7 @@ def get_builds_list(repo_id, offset, parent_dir)
     builds = j['builds']
 
     builds.each do |build|
-      Thread.new(build['id']) do |build_id|
+      Thread.new(build['id'], parent_dir) do |build_id, parent_dir|
         get_build_json(build_id, parent_dir)
       end
       loop do
@@ -85,13 +85,6 @@ def get_builds_list(repo_id, offset, parent_dir)
       end
     end
   end
-  loop do
-    p '================'
-    p Thread.current
-    Thread.list.each{ |thread| p thread }
-    sleep 10
-  end
-  p "#{parent_dir}  over"
   #Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
@@ -109,7 +102,7 @@ def get_repo_id(repo_name, parent_dir)
     return
   end
   id = j['id']
-  get_builds_list(id, 480, parent_dir)
+  get_builds_list(id, 0, parent_dir)
   #puts JSON.pretty_generate(j)
 end
 
@@ -127,7 +120,7 @@ def scan_mysql(id, builds, stars)
   TravisJavaRepository.where("id >= ? AND builds > ? AND stars>?", id, builds, stars).find_each do |e|
     puts "Scan project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
-    flag = false if repo_name.include? 'flori/json'
+    flag = false if repo_name.include? 'twilio/twilio-java'
     next if flag
     next if array.find_index repo_name
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
@@ -149,4 +142,5 @@ end
 
 Thread.abort_on_exception = true
 scan_mysql(1, 50, 25)
+Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 #scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
