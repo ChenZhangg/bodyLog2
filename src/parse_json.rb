@@ -11,7 +11,7 @@ class JavaRepoBuildDatum < ActiveRecord::Base
       password: "root",
       database: "zc",
       encoding: "utf8mb4",
-      collation: "COLLATE utf8mb4_bin"
+      collation: "utf8mb4_bin"
   )
 end
 
