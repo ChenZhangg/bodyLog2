@@ -29,10 +29,18 @@ def get_log(job_id)
 end
 
 def parse_job_json_file(job_file_path)
-  j = JSON.parse IO.read(job_file_path)
-  job_id = j['id']
-  job_number = j['number']
-  f = get_log(job_id)
+  begin
+    j = JSON.parse IO.read(job_file_path)
+    job_id = j['id']
+  rescue
+    regexp = /"number": "([.\d]+)"/
+    IO.readlines(job_file_path).each do |line|
+      break if regexp =~ line
+    end
+    job_id = $1
+  end
+  f = job_id ? get_log(job_id) : nil
+
   return unless f
   log_file_path = job_file_path.sub(/json_files/, 'build_logs').sub(/job@/,'').sub(/\.json/,'.log')
   puts "Download log into #{log_file_path}"
@@ -44,7 +52,11 @@ def parse_job_json_file(job_file_path)
 end
 
 def scan_json_files(json_files_path)
+  flag = true
   Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.sort_by!{ |e| File.mtime(File.join(json_files_path, e)) }.each do |repo_name|
+    flag = false if repo_name.include? 'square/okhttp'
+    next if flag
+
     repo_path = File.join(json_files_path, repo_name)
     parent_dir = repo_path.sub(/json_files/, 'build_logs')
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)

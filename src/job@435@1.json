@@ -1,0 +1,62 @@
+{
+  "@type": "job",
+  "@href": "/job/162274261",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "debug": false,
+    "cancel": false,
+    "restart": false,
+    "delete_log": false
+  },
+  "id": 162274261,
+  "allow_failure": false,
+  "number": "435.1",
+  "state": "passed",
+  "started_at": "2016-09-23T18:22:26Z",
+  "finished_at": "2016-09-23T18:23:32Z",
+  "build": {
+    "@type": "build",
+    "@href": "/build/162274260",
+    "@representation": "minimal",
+    "id": 162274260,
+    "number": "435",
+    "state": "passed",
+    "duration": 344,
+    "event_type": "push",
+    "previous_state": "passed",
+    "pull_request_title": null,
+    "pull_request_number": null,
+    "started_at": "2016-09-23T18:22:22Z",
+    "finished_at": "2016-09-23T18:24:24Z"
+  },
+  "queue": "builds.docker",
+  "repository": {
+    "@type": "repository",
+    "@href": "/repo/461",
+    "@representation": "minimal",
+    "id": 461,
+    "name": "json",
+    "slug": "flori/json"
+  },
+  "commit": {
+    "@type": "commit",
+    "@representation": "minimal",
+    "id": 46180122,
+    "sha": "d92fd465b961810430275e6099d0d525cd42c4bb",
+    "ref": "refs/heads/parsing-numbers-with-specified-number-classes",
+    "message": "WIP",
+    "compare_url": "https://github.com/flori/json/compare/26d3f07b472a...d92fd465b961",
+    "committed_at": "2016-09-23T18:21:48Z"
+  },
+  "owner": {
+    "@type": "user",
+    "@href": "/user/840",
+    "@representation": "minimal",
+    "id": 840,
+    "login": "flori"
+  },
+  "stage": null,
+  "created_at": "2016-09-23T18:22:03.130Z",
+  "updated_at": "2016-09-23T18:23:32.277Z"
+}
