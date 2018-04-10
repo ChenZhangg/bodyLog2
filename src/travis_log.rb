@@ -77,4 +77,5 @@ end
 
 Thread.abort_on_exception = true
 json_files_path = ARGV[0] || '../json_files'
-scan_json_files(json_files_path)
+p json_files_path
+#scan_json_files(json_files_path)
