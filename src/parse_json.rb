@@ -22,7 +22,7 @@ def parse_job_json_file(job_file_path)
     hash[:repo_name] = j['repository']['slug']
     hash[:job_id] = j['id']
     hash[:job_allow_failure] = j['allow_failure']
-    hash[:job_number] = j['number']
+    hash[:job_number] = j['number'].to_f
     hash[:job_state] = j['state']
     hash[:job_started_at] = j['started_at']
     hash[:job_finished_at] = j['finished_at']
