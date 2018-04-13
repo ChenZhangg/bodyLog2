@@ -52,10 +52,12 @@ def parse_job_json_file(job_file_path)
 end
 
 def scan_json_files(json_files_path)
+
   flag = true
+  flag_repo = 'andstatus@andstatus'
   Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.sort_by!{ |e| File.mtime(File.join(json_files_path, e)) }.each do |repo_name|
     puts "Scan project #{repo_name}"
-    flag = false if repo_name.include? 'square@okhttp'
+    flag = false if repo_name.include? flag_repo
     next if flag
 
     repo_path = File.join(json_files_path, repo_name)
@@ -73,7 +75,7 @@ def scan_json_files(json_files_path)
       end
     end
   end
-
+  puts "=====================Scan over==================="
   Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
