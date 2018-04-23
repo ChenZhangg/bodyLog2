@@ -120,7 +120,7 @@ def scan_mysql(id, builds, stars)
   TravisJavaRepository.where("id >= ? AND builds > ? AND stars>?", id, builds, stars).find_each do |e|
     puts "Scan project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
-    flag = false if repo_name.include? 'tminglei@binder'
+    flag = false if repo_name.include? 'tminglei/binder'
     next if flag
     next if array.find_index repo_name
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
