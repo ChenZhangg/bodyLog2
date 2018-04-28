@@ -116,8 +116,10 @@ end
 
 def scan_mysql(id, builds, stars)
   array = scan_csv('Above1000WithTravisAbove1000.csv')
+  count = 0
   TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", id, builds, stars).find_each do |e|
-    puts "Scan project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
+    count += 1
+    puts "Scan #{count} project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
     next if array.find_index repo_name
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
