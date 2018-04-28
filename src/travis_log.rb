@@ -54,7 +54,7 @@ end
 def scan_json_files(json_files_path)
 
   flag = true
-  flag_repo = 'andstatus@andstatus'
+  flag_repo = 'stefanbirkner@system-rules'
   Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.sort_by!{ |e| File.mtime(File.join(json_files_path, e)) }.each do |repo_name|
     puts "Scan project #{repo_name}"
     flag = false if repo_name.include? flag_repo
@@ -71,7 +71,7 @@ def scan_json_files(json_files_path)
         parse_job_json_file job_file_path
       end
       loop do
-        break if Thread.list.count{|thread| thread.alive? } <= 20
+        break if Thread.list.count{|thread| thread.alive? } <= 300
       end
     end
   end
