@@ -71,7 +71,7 @@ def scan_json_files(json_files_path)
         parse_job_json_file job_file_path
       end
       loop do
-        break if Thread.list.count{|thread| thread.alive? } <= 300
+        break if Thread.list.count{|thread| thread.alive? } <= 200
       end
     end
   end
