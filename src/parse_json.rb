@@ -15,6 +15,7 @@ class JavaRepoBuildDatum < ActiveRecord::Base
   )
 end
 
+@id = 0
 def parse_job_json_file(job_file_path)
   begin
     j = JSON.parse IO.read(job_file_path)
@@ -57,7 +58,9 @@ def parse_job_json_file(job_file_path)
     hash[:created_by_id] = j['created_by'] ? j['created_by']['id'] : nil
     hash[:created_by_login] = j['created_by'] ? j['created_by']['login'] : nil
     hash[:build_updated_at] = j['updated_at']
-    @queue.enq hash
+    @id += 1
+    hash[:id] = @id
+    JavaRepoBuildDatum.create hash
     #puts JSON.pretty_generate(j)
   rescue
     puts  $!
@@ -67,42 +70,18 @@ end
 
 def scan_json_files(json_files_path)
 
-  Dir.entries(json_files_path).select{ |p| p =~ /.+@.+/ }.each do |repo_name|
+  Dir.foreach(json_files_path) do |repo_name|
+    next if repo_name !~ /.+@.+/
     repo_path = File.join(json_files_path, repo_name)
     Dir.foreach(repo_path) do |job_file_name|
       next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
-      thr=Thread.new(job_file_path) do |job_file_path|
-        parse_job_json_file job_file_path
-      end
-
-      loop do
-        count = Thread.list.count{|thread| thread.alive? }
-        break if count <= 50
-      end
-
+      parse_job_json_file job_file_path
     end
   end
-  Thread.list.each{|thread| thread.join if thread.alive? && thread != Thread.current}
 end
 
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
 
-@queue = SizedQueue.new(50)
-consumer = Thread.new do
-  id = 0
-  loop do
-    id += 1
-    hash = @queue.deq
-    break if hash == :END_OF_WORK
-    hash[:id] = id
-    JavaRepoBuildDatum.create hash
-    hash = nil
-    #tjr=JavaRepoBuildDatum.create hash
-  end
-end
-
 scan_json_files json_file_path
-@queue.enq(:END_OF_WORK)
-consumer.join
