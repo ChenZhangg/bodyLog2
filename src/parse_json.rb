@@ -2,6 +2,7 @@ require 'json'
 require 'active_record'
 require 'activerecord-jdbcmysql-adapter'
 require 'thread'
+require 'travis'
 
 class JavaRepoBuildDatum < ActiveRecord::Base
   establish_connection(
@@ -15,11 +16,12 @@ class JavaRepoBuildDatum < ActiveRecord::Base
   )
 end
 
-@id = 0
 def parse_job_json_file(job_file_path)
+  hash = Hash.new
+  match = /json_files\/(.+)\/job@(.+)@(.+)\.json/.match job_file_path
+  repo_name, build_number, job_number = match[1].sub(/@/, '/'), match[2].to_i, match[2] + '.' + match[3]
   begin
     j = JSON.parse IO.read(job_file_path)
-    hash = Hash.new
     hash[:repo_name] = j['repository']['slug']
     hash[:job_id] = j['id']
     hash[:job_allow_failure] = j['allow_failure']
@@ -38,7 +40,33 @@ def parse_job_json_file(job_file_path)
     hash[:commit_message] = j['commit'] ? j['commit']['message'] : nil
     hash[:commit_compare_url] = j['commit'] ? j['commit']['compare_url'] : nil
     hash[:commit_committed_at] = j['commit'] ? j['commit']['committed_at'] : nil
+  rescue
+    puts  $!
+    puts job_file_path
+    trepo = Travis::Repository.find(repo_name)
+    tjob = trepo.job(job_number)
+    hash[:repo_name] = repo_name
+    hash[:job_id] = tjob.id
+    hash[:job_allow_failure] = tjob.allow_failure
+    hash[:job_number] = tjob.number.to_f
+    hash[:job_state] = tjob.state
+    hash[:job_started_at] = tjob.started_at
+    hash[:job_finished_at] = tjob.finished_at
+    hash[:job_queue] = tjob.queue
+    hash[:job_stage] = nil
+    hash[:job_created_at] = nil#tjob.created_at
+    hash[:job_updated_at] = nil#tjob.updated_at
 
+    commit = tjob.commit
+    hash[:commit_id] =  tjob.commit_id
+    hash[:commit_sha] =  commit.sha
+    hash[:commit_ref] = commit.branch
+    hash[:commit_message] =  commit.message
+    hash[:commit_compare_url] =  commit.compare_url
+    hash[:commit_committed_at] =  commit.committed_at
+  end
+
+  begin
     build_file_path = job_file_path.sub(/(?<=\/)job(?=@)/, 'build').sub(/(?<=\d)@\d+(?=\.json)/, '')
     j = JSON.parse IO.read(build_file_path)
 
@@ -58,30 +86,67 @@ def parse_job_json_file(job_file_path)
     hash[:created_by_id] = j['created_by'] ? j['created_by']['id'] : nil
     hash[:created_by_login] = j['created_by'] ? j['created_by']['login'] : nil
     hash[:build_updated_at] = j['updated_at']
-    @id += 1
-    hash[:id] = @id
-    JavaRepoBuildDatum.create hash
-    #puts JSON.pretty_generate(j)
   rescue
     puts  $!
     puts job_file_path
+    trepo = Travis::Repository.find(repo_name)
+    tbuild = trepo.build(build_number)
+    hash[:build_id] = tbuild.id
+    hash[:build_number] = tbuild.number
+    hash[:build_state] = tbuild.state
+    hash[:build_duration] = tbuild.duration
+    hash[:build_event_type] = tbuild.push? ? "push" : "pull_request"
+    hash[:pull_request_title] = tbuild.pull_request_title
+    hash[:pull_request_number] = tbuild.pull_request_number
+    hash[:build_started_at] = tbuild.started_at
+    hash[:build_finished_at] = tbuild.finished_at
+    hash[:build_branch] = tbuild.branch_info
+    hash[:build_tag] = nil#j['tag'] ? j['tag']['name'] : nil
+
+    hash[:build_stages] =  nil#j['stages']
+    hash[:created_by_id] = nil#j['created_by'] ? j['created_by']['id'] : nil
+    hash[:created_by_login] = nil#j['created_by'] ? j['created_by']['login'] : nil
+    hash[:build_updated_at] = nil#j['updated_at']
   end
+  @queue.enq hash
 end
 
 def scan_json_files(json_files_path)
 
+  consumer = Thread.new do
+    id = 0
+    loop do
+      id += 1
+      hash = @queue.deq
+      #break if hash == :END_OF_WORK
+      hash[:id] = id
+      JavaRepoBuildDatum.create hash
+      hash = nil
+    end
+  end
   Dir.foreach(json_files_path) do |repo_name|
     next if repo_name !~ /.+@.+/
     repo_path = File.join(json_files_path, repo_name)
     Dir.foreach(repo_path) do |job_file_name|
       next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
-      parse_job_json_file job_file_path
+      Thread.new(job_file_path) do |job_file_path|
+        parse_job_json_file job_file_path
+      end
+
+      loop do
+        count = Thread.list.count{|thread| thread.alive? }
+        break if count <= 30
+      end
+
     end
   end
+
+  sleep 3000
 end
 
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
-
+@queue = SizedQueue.new(20)
 scan_json_files json_file_path
+#parse_job_json_file('/Users/zhangchen/projects/bodyLog2/json_files/flori@json/job@430@1.json')
