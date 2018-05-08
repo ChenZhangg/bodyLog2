@@ -114,7 +114,7 @@ end
 def scan_json_files(json_files_path)
 
   consumer = Thread.new do
-    id = 46386
+    id = 256927
     loop do
       id += 1
       hash = @queue.deq
@@ -129,7 +129,7 @@ def scan_json_files(json_files_path)
   Dir.foreach(json_files_path) do |repo_name|
     next if repo_name !~ /.+@.+/
 
-    flag = false if repo_name =~/stellar@java-stellar-sdk/
+    flag = false if repo_name =~ /GoogleCloudPlatform@google-cloud-intellij/
     next if flag
     repo_path = File.join(json_files_path, repo_name)
     Dir.foreach(repo_path) do |job_file_name|
