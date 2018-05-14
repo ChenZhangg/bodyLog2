@@ -3,7 +3,7 @@ require 'active_record'
 require 'activerecord-jdbcmysql-adapter'
 require 'thread'
 require 'travis'
-
+require 'date'
 class JavaRepoBuildDatum < ActiveRecord::Base
   establish_connection(
       adapter:  "mysql",
@@ -16,7 +16,20 @@ class JavaRepoBuildDatum < ActiveRecord::Base
   )
 end
 
+class TravisJavaRepository < ActiveRecord::Base
+  establish_connection(
+      adapter:  "mysql",
+      host:     "10.131.252.160",
+      username: "root",
+      password: "root",
+      database: "zc",
+      encoding: "utf8mb4",
+      collation: "utf8mb4_bin"
+  )
+end
+
 def parse_job_json_file(job_file_path)
+  p job_file_path
   hash = Hash.new
   match = /json_files\/(.+)\/job@(.+)@(.+)\.json/.match job_file_path
   repo_name, build_number, job_number = match[1].sub(/@/, '/'), match[2].to_i, match[2] + '.' + match[3]
@@ -25,14 +38,14 @@ def parse_job_json_file(job_file_path)
     hash[:repo_name] = j['repository']['slug']
     hash[:job_id] = j['id']
     hash[:job_allow_failure] = j['allow_failure']
-    hash[:job_number] = j['number'].to_f
+    hash[:job_number] = j['number']
     hash[:job_state] = j['state']
-    hash[:job_started_at] = j['started_at']
-    hash[:job_finished_at] = j['finished_at']
+    hash[:job_started_at] = DateTime.parse(j['started_at']).new_offset(0)
+    hash[:job_finished_at] = DateTime.parse(j['finished_at']).new_offset(0)
     hash[:job_queue] = j['queue']
     hash[:job_stage] = j['stage']
-    hash[:job_created_at] = j['created_at']
-    hash[:job_updated_at] = j['updated_at']
+    hash[:job_created_at] = DateTime.parse(j['created_at']).new_offset(0)
+    hash[:job_updated_at] = DateTime.parse(j['updated_at']).new_offset(0)
 
     hash[:commit_id] = j['commit'] ? j['commit']['id'] : nil
     hash[:commit_sha] = j['commit'] ? j['commit']['sha'] : nil
@@ -48,10 +61,10 @@ def parse_job_json_file(job_file_path)
     hash[:repo_name] = repo_name
     hash[:job_id] = tjob.id
     hash[:job_allow_failure] = tjob.allow_failure
-    hash[:job_number] = tjob.number.to_f
+    hash[:job_number] = tjob.number
     hash[:job_state] = tjob.state
-    hash[:job_started_at] = tjob.started_at
-    hash[:job_finished_at] = tjob.finished_at
+    hash[:job_started_at] = DateTime.parse(tjob.started_at.to_s).new_offset(0)
+    hash[:job_finished_at] = DateTime.parse(tjob.finished_at.to_s).new_offset(0)
     hash[:job_queue] = tjob.queue
     hash[:job_stage] = nil
     hash[:job_created_at] = nil#tjob.created_at
@@ -68,6 +81,7 @@ def parse_job_json_file(job_file_path)
 
   begin
     build_file_path = job_file_path.sub(/(?<=\/)job(?=@)/, 'build').sub(/(?<=\d)@\d+(?=\.json)/, '')
+    p build_file_path
     j = JSON.parse IO.read(build_file_path)
 
     hash[:build_id] = j['id']
@@ -77,15 +91,15 @@ def parse_job_json_file(job_file_path)
     hash[:build_event_type] = j['event_type']
     hash[:pull_request_title] = j['pull_request_title']
     hash[:pull_request_number] = j['pull_request_number']
-    hash[:build_started_at] = j['started_at']
-    hash[:build_finished_at] = j['finished_at']
+    hash[:build_started_at] = DateTime.parse(j['started_at']).new_offset(0)
+    hash[:build_finished_at] = DateTime.parse(j['finished_at']).new_offset(0)
     hash[:build_branch] = j['branch'] ? j['branch']['name'] : nil
     hash[:build_tag] = j['tag'] ? j['tag']['name'] : nil
 
     hash[:build_stages] = j['stages']
     hash[:created_by_id] = j['created_by'] ? j['created_by']['id'] : nil
     hash[:created_by_login] = j['created_by'] ? j['created_by']['login'] : nil
-    hash[:build_updated_at] = j['updated_at']
+    hash[:build_updated_at] = DateTime.parse(j['updated_at']).new_offset(0)
   rescue
     puts  $!
     puts job_file_path
@@ -98,8 +112,8 @@ def parse_job_json_file(job_file_path)
     hash[:build_event_type] = tbuild.push? ? "push" : "pull_request"
     hash[:pull_request_title] = tbuild.pull_request_title
     hash[:pull_request_number] = tbuild.pull_request_number
-    hash[:build_started_at] = tbuild.started_at
-    hash[:build_finished_at] = tbuild.finished_at
+    hash[:build_started_at] = DateTime.parse(tbuild.started_at.to_s).new_offset(0)
+    hash[:build_finished_at] = DateTime.parse(tbuild.finished_at.to_s).new_offset(0)
     hash[:build_branch] = tbuild.branch_info
     hash[:build_tag] = nil#j['tag'] ? j['tag']['name'] : nil
 
@@ -114,44 +128,41 @@ end
 def scan_json_files(json_files_path)
 
   consumer = Thread.new do
-    id = 256927
+    id = 0
     loop do
-      id += 1
       hash = @queue.deq
       #break if hash == :END_OF_WORK
+      id += 1
       hash[:id] = id
       JavaRepoBuildDatum.create hash
       hash = nil
     end
   end
 
-  flag = true
-  Dir.foreach(json_files_path) do |repo_name|
-    next if repo_name !~ /.+@.+/
-
-    flag = false if repo_name =~ /GoogleCloudPlatform@google-cloud-intellij/
-    next if flag
-    repo_path = File.join(json_files_path, repo_name)
+  TravisJavaRepository.where("repo_id >= ? AND builds >= ? AND stars>= ?", 1, 50, 25).find_each do |repo|
+    repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
     Dir.foreach(repo_path) do |job_file_name|
       next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
       Thread.new(job_file_path) do |job_file_path|
         parse_job_json_file job_file_path
       end
-
       loop do
         count = Thread.list.count{|thread| thread.alive? }
         break if count <= 30
       end
-
     end
   end
-
   sleep 3000
 end
 
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
-@queue = SizedQueue.new(20)
+@queue = SizedQueue.new(30)
 scan_json_files json_file_path
-#parse_job_json_file('/Users/zhangchen/projects/bodyLog2/json_files/flori@json/job@430@1.json')
+
+
+#temp = JavaRepoBuildDatum.where(repo_name: 'Karumi/Rosie', job_number: '51.10')
+#p temp
+#match = /json_files\/(.+)\/job@(.+)@(.+)\.json/.match '/home/fdse/user/zc/bodyLog2/json_files/jirutka@validator-collection/'
+#parse_job_json_file '/Users/zhangchen/projects/bodyLog2/json_files/xetorthio@jedis/job@2188@1.json'
