@@ -14,7 +14,7 @@ class JavaRepoBuildDatum < ActiveRecord::Base
       encoding: "utf8mb4",
       collation: "utf8mb4_bin"
   )
-  #self.primary_key = 'repo_and_job'
+  self.primary_key = 'repo_and_job'
 end
 
 class TravisJavaRepository < ActiveRecord::Base
@@ -29,9 +29,10 @@ class TravisJavaRepository < ActiveRecord::Base
   )
 end
 
-def parse_job_json_file(job_file_path)
+def parse_job_json_file(job_file_path, repo_id)
   p job_file_path
   hash = Hash.new
+  hash[:travis_java_repository_id] = repo_id
   match = /json_files\/(.+)\/job@(.+)@(.+)\.json/.match job_file_path
   repo_name, build_number, job_number = match[1].sub(/@/, '/'), match[2].to_i, match[2] + '.' + match[3]
   begin
@@ -78,6 +79,7 @@ def parse_job_json_file(job_file_path)
     hash[:commit_ref] = commit.branch
     hash[:commit_message] =  commit.message
     hash[:commit_compare_url] =  commit.compare_url
+    p "committed_at class: #{commit.committed_at}   #{commit.committed_at}"
     hash[:commit_committed_at] =  DateTime.parse(commit.committed_at.to_s).new_offset(0)
   end
 
@@ -143,11 +145,12 @@ def scan_json_files(json_files_path)
 
   TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", 1, 50, 25).find_each do |repo|
     repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
+    repo_id = repo.id
     Dir.foreach(repo_path) do |job_file_name|
       next if job_file_name !~ /job@.+@.+/
       job_file_path = File.join(repo_path, job_file_name)
-      Thread.new(job_file_path) do |job_file_path|
-        parse_job_json_file job_file_path
+      Thread.new(job_file_path, repo_id) do |job_file_path, repo_id|
+        parse_job_json_file job_file_path, repo_id
       end
       loop do
         count = Thread.list.count{|thread| thread.alive? }
