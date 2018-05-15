@@ -77,7 +77,7 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:commit_ref] = commit.branch
     hash[:commit_message] =  commit.message
     hash[:commit_compare_url] =  commit.compare_url
-    hash[:commit_committed_at] = commit.committed_at? DateTime.parse(commit.committed_at.to_s).new_offset(0)
+    hash[:commit_committed_at] = commit.committed_at ? DateTime.parse(commit.committed_at.to_s).new_offset(0)
   end
 
   begin
