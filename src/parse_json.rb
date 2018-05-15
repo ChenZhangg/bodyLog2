@@ -14,7 +14,6 @@ class JavaRepoBuildDatum < ActiveRecord::Base
       encoding: "utf8mb4",
       collation: "utf8mb4_bin"
   )
-  self.primary_key = :repo_and_job
 end
 
 class TravisJavaRepository < ActiveRecord::Base
@@ -30,7 +29,6 @@ class TravisJavaRepository < ActiveRecord::Base
 end
 
 def parse_job_json_file(job_file_path, repo_id)
-  p job_file_path
   hash = Hash.new
   hash[:travis_java_repository_id] = repo_id
   match = /json_files\/(.+)\/job@(.+)@(.+)\.json/.match job_file_path
@@ -79,13 +77,11 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:commit_ref] = commit.branch
     hash[:commit_message] =  commit.message
     hash[:commit_compare_url] =  commit.compare_url
-    p "committed_at class: #{commit.committed_at}   #{commit.committed_at}"
-    hash[:commit_committed_at] =  DateTime.parse(commit.committed_at.to_s).new_offset(0)
+    hash[:commit_committed_at] = commit.committed_at? DateTime.parse(commit.committed_at.to_s).new_offset(0)
   end
 
   begin
     build_file_path = job_file_path.sub(/(?<=\/)job(?=@)/, 'build').sub(/(?<=\d)@\d+(?=\.json)/, '')
-    p build_file_path
     j = JSON.parse IO.read(build_file_path)
 
     hash[:build_id] = j['id']
@@ -137,7 +133,7 @@ def scan_json_files(json_files_path)
       hash = @queue.deq
       #break if hash == :END_OF_WORK
       id += 1
-      hash[:id] = id
+      #hash[:id] = id
       JavaRepoBuildDatum.create hash
       hash = nil
     end
