@@ -14,6 +14,7 @@ class JavaRepoBuildDatum < ActiveRecord::Base
       encoding: "utf8mb4",
       collation: "utf8mb4_bin"
   )
+  self.primary_key = 'repo_and_job'
 end
 
 class TravisJavaRepository < ActiveRecord::Base
