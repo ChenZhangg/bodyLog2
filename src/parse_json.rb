@@ -39,6 +39,7 @@ def parse_job_json_file(job_file_path)
     hash[:job_id] = j['id']
     hash[:job_allow_failure] = j['allow_failure']
     hash[:job_number] = j['number']
+    hash[:repo_and_job] = hash[:repo_name].sub(/\//,'@') + '@' + hash[:job_number]
     hash[:job_state] = j['state']
     hash[:job_started_at] = DateTime.parse(j['started_at']).new_offset(0)
     hash[:job_finished_at] = DateTime.parse(j['finished_at']).new_offset(0)
@@ -52,7 +53,7 @@ def parse_job_json_file(job_file_path)
     hash[:commit_ref] = j['commit'] ? j['commit']['ref'] : nil
     hash[:commit_message] = j['commit'] ? j['commit']['message'] : nil
     hash[:commit_compare_url] = j['commit'] ? j['commit']['compare_url'] : nil
-    hash[:commit_committed_at] = j['commit'] ? j['commit']['committed_at'] : nil
+    hash[:commit_committed_at] = j['commit'] ? DateTime.parse(j['commit']['committed_at']).new_offset(0) : nil
   rescue
     puts  $!
     puts job_file_path
@@ -76,7 +77,7 @@ def parse_job_json_file(job_file_path)
     hash[:commit_ref] = commit.branch
     hash[:commit_message] =  commit.message
     hash[:commit_compare_url] =  commit.compare_url
-    hash[:commit_committed_at] =  commit.committed_at
+    hash[:commit_committed_at] =  DateTime.parse(commit.committed_at.to_s).new_offset(0)
   end
 
   begin
