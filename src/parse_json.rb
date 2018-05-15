@@ -141,7 +141,7 @@ def scan_json_files(json_files_path)
     end
   end
 
-  TravisJavaRepository.where("repo_id >= ? AND builds >= ? AND stars>= ?", 1, 50, 25).find_each do |repo|
+  TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", 1, 50, 25).find_each do |repo|
     repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
     Dir.foreach(repo_path) do |job_file_name|
       next if job_file_name !~ /job@.+@.+/
