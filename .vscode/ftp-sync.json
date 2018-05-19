@@ -1,0 +1,27 @@
+{
+    "remotePath": "/home/fdse/user/zc/bodyLog2/",
+    "host": "10.141.221.85",
+    "username": "fdse",
+    "password": "cloudfdse",
+    "port": 22,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\.idea",
+        "\\.build_logs",
+        "\\json_files"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

@@ -41,21 +41,22 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:job_number] = j['number']
     hash[:repo_and_job] = hash[:repo_name].sub(/\//,'@') + '@' + hash[:job_number]
     hash[:job_state] = j['state']
-    hash[:job_started_at] = DateTime.parse(j['started_at']).new_offset(0)
-    hash[:job_finished_at] = DateTime.parse(j['finished_at']).new_offset(0)
+    hash[:job_started_at] = j['started_at']? DateTime.parse(j['started_at']).new_offset(0) : nil
+    hash[:job_finished_at] = j['finished_at'] ? DateTime.parse(j['finished_at']).new_offset(0) : nil
     hash[:job_queue] = j['queue']
     hash[:job_stage] = j['stage']
-    hash[:job_created_at] = DateTime.parse(j['created_at']).new_offset(0)
-    hash[:job_updated_at] = DateTime.parse(j['updated_at']).new_offset(0)
+    hash[:job_created_at] = j['created_at'] ? DateTime.parse(j['created_at']).new_offset(0) : nil
+    hash[:job_updated_at] = j['updated_at'] ? DateTime.parse(j['updated_at']).new_offset(0) : nil
 
     hash[:commit_id] = j['commit'] ? j['commit']['id'] : nil
     hash[:commit_sha] = j['commit'] ? j['commit']['sha'] : nil
     hash[:commit_ref] = j['commit'] ? j['commit']['ref'] : nil
     hash[:commit_message] = j['commit'] ? j['commit']['message'] : nil
     hash[:commit_compare_url] = j['commit'] ? j['commit']['compare_url'] : nil
-    hash[:commit_committed_at] = j['commit'] ? DateTime.parse(j['commit']['committed_at']).new_offset(0) : nil
+    hash[:commit_committed_at] = (j['commit'] && j['commit']['committed_at']) ? DateTime.parse(j['commit']['committed_at']).new_offset(0) : nil
   rescue
     puts  $!
+    puts $@
     puts job_file_path
     trepo = Travis::Repository.find(repo_name)
     tjob = trepo.job(job_number)
@@ -63,9 +64,10 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:job_id] = tjob.id
     hash[:job_allow_failure] = tjob.allow_failure
     hash[:job_number] = tjob.number
+    hash[:repo_and_job] = hash[:repo_name].sub(/\//,'@') + '@' + hash[:job_number]
     hash[:job_state] = tjob.state
-    hash[:job_started_at] = DateTime.parse(tjob.started_at.to_s).new_offset(0)
-    hash[:job_finished_at] = DateTime.parse(tjob.finished_at.to_s).new_offset(0)
+    hash[:job_started_at] = tjob.started_at ? DateTime.parse(tjob.started_at.to_s).new_offset(0) : nil
+    hash[:job_finished_at] = tjob.finished_at ? DateTime.parse(tjob.finished_at.to_s).new_offset(0) : nil
     hash[:job_queue] = tjob.queue
     hash[:job_stage] = nil
     hash[:job_created_at] = nil#tjob.created_at
@@ -77,7 +79,7 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:commit_ref] = commit.branch
     hash[:commit_message] =  commit.message
     hash[:commit_compare_url] =  commit.compare_url
-    hash[:commit_committed_at] = commit.committed_at ? DateTime.parse(commit.committed_at.to_s).new_offset(0)
+    hash[:commit_committed_at] = commit.committed_at ? DateTime.parse(commit.committed_at.to_s).new_offset(0) : nil
   end
 
   begin
@@ -91,17 +93,18 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:build_event_type] = j['event_type']
     hash[:pull_request_title] = j['pull_request_title']
     hash[:pull_request_number] = j['pull_request_number']
-    hash[:build_started_at] = DateTime.parse(j['started_at']).new_offset(0)
-    hash[:build_finished_at] = DateTime.parse(j['finished_at']).new_offset(0)
+    hash[:build_started_at] = j['started_at'] ? DateTime.parse(j['started_at']).new_offset(0) : nil
+    hash[:build_finished_at] = j['finished_at'] ? DateTime.parse(j['finished_at']).new_offset(0) : nil
     hash[:build_branch] = j['branch'] ? j['branch']['name'] : nil
     hash[:build_tag] = j['tag'] ? j['tag']['name'] : nil
 
     hash[:build_stages] = j['stages']
     hash[:created_by_id] = j['created_by'] ? j['created_by']['id'] : nil
     hash[:created_by_login] = j['created_by'] ? j['created_by']['login'] : nil
-    hash[:build_updated_at] = DateTime.parse(j['updated_at']).new_offset(0)
+    hash[:build_updated_at] = j['updated_at'] ? DateTime.parse(j['updated_at']).new_offset(0) : nil
   rescue
     puts  $!
+    puts $@
     puts job_file_path
     trepo = Travis::Repository.find(repo_name)
     tbuild = trepo.build(build_number)
@@ -112,8 +115,8 @@ def parse_job_json_file(job_file_path, repo_id)
     hash[:build_event_type] = tbuild.push? ? "push" : "pull_request"
     hash[:pull_request_title] = tbuild.pull_request_title
     hash[:pull_request_number] = tbuild.pull_request_number
-    hash[:build_started_at] = DateTime.parse(tbuild.started_at.to_s).new_offset(0)
-    hash[:build_finished_at] = DateTime.parse(tbuild.finished_at.to_s).new_offset(0)
+    hash[:build_started_at] = tbuild.started_at ? DateTime.parse(tbuild.started_at.to_s).new_offset(0) : nil
+    hash[:build_finished_at] = tbuild.finished_at ? DateTime.parse(tbuild.finished_at.to_s).new_offset(0) : nil
     hash[:build_branch] = tbuild.branch_info
     hash[:build_tag] = nil#j['tag'] ? j['tag']['name'] : nil
 
@@ -128,18 +131,19 @@ end
 def scan_json_files(json_files_path)
 
   consumer = Thread.new do
-    id = 0
+    id = 2365710
     loop do
       hash = @queue.deq
       #break if hash == :END_OF_WORK
       id += 1
-      #hash[:id] = id
+      hash[:id] = id
       JavaRepoBuildDatum.create hash
       hash = nil
     end
   end
 
-  TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", 1, 50, 25).find_each do |repo|
+  TravisJavaRepository.where("id > ? AND builds >= ? AND stars>= ?", 195910, 50, 25).find_each do |repo|
+    puts "Scan repo: #{repo.repo_name}"
     repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
     repo_id = repo.id
     Dir.foreach(repo_path) do |job_file_name|
@@ -150,16 +154,17 @@ def scan_json_files(json_files_path)
       end
       loop do
         count = Thread.list.count{|thread| thread.alive? }
-        break if count <= 30
+        break if count <= 200
       end
     end
   end
   sleep 3000
+  puts "Scan Over"
 end
 
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
-@queue = SizedQueue.new(30)
+@queue = SizedQueue.new(200)
 scan_json_files json_file_path
 
 
