@@ -117,7 +117,7 @@ end
 def scan_mysql(id, builds, stars)
   array = scan_csv('Above1000WithTravisAbove1000.csv')
   count = 0
-  TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", id, builds, stars).find_each do |e|
+  TravisJavaRepository.where("id = ? AND builds >= ? AND stars>= ?", id, builds, stars).find_each do |e|
     count += 1
     puts "Scan #{count} project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
     repo_name = e.repo_name
@@ -141,6 +141,6 @@ class TravisJavaRepository < ActiveRecord::Base
 end
 
 Thread.abort_on_exception = true
-scan_mysql(1, 50, 25)
+scan_mysql(1412288, 50, 25)
 Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
 #scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
