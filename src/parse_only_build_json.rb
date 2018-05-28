@@ -69,6 +69,7 @@ def parse_build_json_file(build_file_path, repo_id)
   hash = Hash.new
   hash[:travis_java_repository_id] = repo_id
   match = /json_files\/(.+)\/build@(.+)\.json/.match build_file_path
+  return unless match
   repo_name, build_number = match[1].sub(/@/, '/'), match[2].to_i
   hash[:repo_name] = repo_name
   hash[:build_number] = build_number
@@ -79,13 +80,13 @@ def parse_build_json_file(build_file_path, repo_id)
     hash[:build_id] = j['id']
     hash[:build_duration] = j['duration']
     hash[:build_event_type] = j['event_type']
-    hahs[:build_previous_state] = j['previous_state']
+    hash[:build_previous_state] = j['previous_state']
     hash[:pull_request_title] = j['pull_request_title']
     hash[:pull_request_number] = j['pull_request_number']
     hash[:build_started_at] = j['started_at'] ? DateTime.parse(j['started_at']).new_offset(0) : nil
     hash[:build_finished_at] = j['finished_at'] ? DateTime.parse(j['finished_at']).new_offset(0) : nil
     hash[:build_branch] = j['branch'] ? j['branch']['name'] : nil
-    hash[:build_tag] = j['tag'] ? j['tag']['name'] : nil
+    hash[:build_tag] = j['tag']
 
     hash[:build_stages] = j['stages']
     hash[:created_by_id] = j['created_by'] ? j['created_by']['id'] : nil
@@ -102,10 +103,10 @@ def parse_build_json_file(build_file_path, repo_id)
   rescue
     puts  $!
     puts $@
-    puts job_file_path
+    puts build_file_path
     rescue_build(repo_name, build_number, hash)
   end
-  @queue.enq hash
+  @result_queue.enq hash
 end
 
 def thread_init
@@ -131,7 +132,7 @@ def thread_init
       loop do
         h = @input_queue.deq
         break if h == :END_OF_WORK
-        compiler_error_message_slice h[:build_file_path], h[:repo_id]
+        parse_build_json_file h[:build_file_path], h[:repo_id]
       end
     end
     threads << thread
@@ -147,16 +148,20 @@ def scan_json_files(json_files_path)
     repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
     repo_id = repo.id
     Dir.foreach(repo_path) do |build_file_name|
-      next if build_file_name !~ /build@.+@.+/
+      next if build_file_name !~ /build@.+/
       build_file_path = File.join(repo_path, build_file_name)
+      p build_file_path
       hash = Hash.new
-      hash[:build_file_path] = log_file_path
+      hash[:build_file_path] = build_file_path
       hash[:repo_id] = repo_id
       @input_queue.enq hash
     end
   end
-  sleep 3000
-  @queue.enq :END_OF_WORK
+  @result_queue.enq :END_OF_WORK
+  200.times do
+    @input_queue.enq :END_OF_WORK
+  end
+  threads.each { |t| t.join }
   puts "Scan Over"
 end
 
