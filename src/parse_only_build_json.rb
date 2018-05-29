@@ -111,9 +111,10 @@ end
 
 def thread_init
   consumer = Thread.new do
-    id = 0
+    id = 2858077
     loop do
       bulk = []
+      hash = nil
       200.times do
         hash = @result_queue.deq
         break if hash == :END_OF_WORK
@@ -122,7 +123,7 @@ def thread_init
         bulk << JavaRepoBuildDatum.new(hash)
       end
       JavaRepoBuildDatum.import bulk
-      break if bulk.length < 200
+      break if hash == :END_OF_WORK
     end
   end
 
@@ -137,13 +138,13 @@ def thread_init
     end
     threads << thread
   end
-  threads << consumer
+  [consumer, threads]
 end
 
 def scan_json_files(json_files_path)
-  threads = thread_init
+  consumer, threads = thread_init
 
-  TravisJavaRepository.where("id > ? AND builds >= ? AND stars>= ?", 0, 50, 25).find_each do |repo|
+  TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", 1729498, 50, 25).find_each do |repo|
     puts "Scan repo: #{repo.repo_name}"
     repo_path = File.join(json_files_path, repo.repo_name.sub(/\//, '@'))
     repo_id = repo.id
@@ -157,16 +158,17 @@ def scan_json_files(json_files_path)
       @input_queue.enq hash
     end
   end
-  @result_queue.enq :END_OF_WORK
-  200.times do
+  126.times do
     @input_queue.enq :END_OF_WORK
   end
   threads.each { |t| t.join }
+  @result_queue.enq :END_OF_WORK
+  consumer.join
   puts "Scan Over"
 end
 
 Thread.abort_on_exception = true
 json_file_path = ARGV[0] || '../json_files'
 @result_queue = SizedQueue.new(200)
-@input_queue = SizedQueue.new(400)
+@input_queue = SizedQueue.new(300)
 scan_json_files json_file_path
