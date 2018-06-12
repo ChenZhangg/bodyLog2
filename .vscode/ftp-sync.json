@@ -1,12 +1,12 @@
 {
     "remotePath": "/home/fdse/user/zc/bodyLog2/",
-    "host": "10.141.221.85",
+    "host": "10.141.221.86",
     "username": "fdse",
     "password": "cloudfdse",
     "port": 22,
     "secure": false,
     "protocol": "sftp",
-    "uploadOnSave": true,
+    "uploadOnSave": false,
     "passive": false,
     "debug": false,
     "privateKeyPath": null,
@@ -16,7 +16,7 @@
         "\\.git",
         "\\.DS_Store",
         "\\.idea",
-        "\\.build_logs",
+        "\\build_logs",
         "\\json_files"
     ],
     "generatedFiles": {

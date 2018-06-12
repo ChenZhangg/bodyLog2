@@ -73,10 +73,7 @@ module DownloadJSON
         build_number = build['number']
         file_name = File.join(parent_dir, "build@#{build_number}.json")
         next if File.size?(file_name)
-        hash = Hash.new
-        hash[:build_id] = build['id']
-        hash[:parent_dir] = parent_dir
-        @queue.enq hash
+        get_build_json(build['id'], parent_dir)
       end
       builds = nil
     end    
@@ -101,14 +98,14 @@ module DownloadJSON
   end
 
   def self.thread_init
-    @queue = SizedQueue.new(200)
+    @queue = SizedQueue.new(31)
     threads = []
     31.times do
       thread = Thread.new do
         loop do
           hash = @queue.deq
           break if hash == :END_OF_WORK
-          get_build_json(hash[:build_id], hash[:parent_dir])
+          get_repo_id(hash[:repo_name], hash[:parent_dir])
         end
       end
       threads << thread
@@ -116,14 +113,17 @@ module DownloadJSON
     threads
   end
 
-  def self.scan_repos(builds, stars)
+  def self.scan_repos(id, builds, stars)
     threads = thread_init
-    TravisJavaRepository.where("builds >= ? AND stars>= ?", builds, stars).find_each do |repo|
+    TravisJavaRepository.where("id >= ? AND builds >= ? AND stars>= ?", id, builds, stars).find_each do |repo|
       repo_name = repo.repo_name
-      puts "Scan project  id=#{repo.id}   #{repo_name} builds=#{repo.builds}   stars=#{repo.stars}"
       parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
       FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
-      get_repo_id(repo_name, parent_dir)
+      hash = Hash.new
+      hash[:repo_name] = repo_name
+      hash[:parent_dir] = parent_dir
+      @queue.enq hash
+      puts "Scan project  id=#{repo.id}   #{repo_name} builds=#{repo.builds}   stars=#{repo.stars}"
     end
     31.times do
       @queue.enq :END_OF_WORK
@@ -134,7 +134,7 @@ module DownloadJSON
 
   def self.run
     Thread.abort_on_exception = true
-    scan_repos(50, 25)
+    scan_repos(1, 50, 25)
   end  
 end
 DownloadJSON.run
