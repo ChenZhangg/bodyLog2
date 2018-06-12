@@ -5,6 +5,15 @@ require 'fileutils'
 require 'active_record'
 require 'activerecord-jdbcmysql-adapter'
 
+class TravisJavaRepository < ActiveRecord::Base
+  establish_connection(
+      adapter:  "mysql",
+      host:     "10.131.252.160",
+      username: "root",
+      password: "root",
+      database: "zc"
+  )
+end
 
 def get_job_json(job_id, parent_dir)
   url = "https://api.travis-ci.org/job/#{job_id}"
@@ -106,41 +115,32 @@ def get_repo_id(repo_name, parent_dir)
   #puts JSON.pretty_generate(j)
 end
 
-def scan_csv(file)
-  array = []
-  CSV.foreach(file) do |row|
-    array << row[0]
+def thread_init
+  threads = []
+  30.times do
+    thread = Thread.new do
+      loop do
+        h = @job_queue.deq
+        break if h == :END_OF_WORK
+        compiler_error_message_slice h[:repo_name], h[:job_number], h[:java_repo_job_datum_id], h[:slice_segment]
+      end
+    end
+    threads << thread
   end
-  array
 end
 
-def scan_mysql(id, builds, stars)
-  array = scan_csv('Above1000WithTravisAbove1000.csv')
-  count = 0
-  TravisJavaRepository.where("id = ? AND builds >= ? AND stars>= ?", id, builds, stars).find_each do |e|
-    count += 1
-    puts "Scan #{count} project #{e.repo_name}   id=#{e.id}   builds=#{e.builds}   stars=#{e.stars}"
-    repo_name = e.repo_name
-    next if array.find_index repo_name
+def scan_mysql(builds, stars)
+  TravisJavaRepository.where("builds >= ? AND stars>= ?", id, builds, stars).find_each do |repo|
+    repo_name = repo.repo_name
+    puts "Scan project  id=#{e.id}   #{repo_name} builds=#{repo.builds}   stars=#{repo.stars}"
     parent_dir = File.join('..', 'json_files', repo_name.gsub(/\//,'@'))
-    next if File.exist?(parent_dir)
     FileUtils.mkdir_p(parent_dir) unless File.exist?(parent_dir)
     get_repo_id(repo_name, parent_dir)
   end
-
 end
 
-class TravisJavaRepository < ActiveRecord::Base
-  establish_connection(
-      adapter:  "mysql",
-      host:     "10.131.252.160",
-      username: "root",
-      password: "root",
-      database: "zc"
-  )
-end
+
 
 Thread.abort_on_exception = true
-scan_mysql(1412288, 50, 25)
-Thread.list.each { |thread| thread.join if thread.alive? && thread != Thread.current}
+scan_mysql(50, 25)
 #scanProjectsInCsv('Above1000WithTravisAbove1000.csv')
