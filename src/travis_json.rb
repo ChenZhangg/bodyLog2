@@ -7,9 +7,9 @@ module DownloadJSON
   def self.get_job_json(job_id, parent_dir)
     url = "https://api.travis-ci.org/job/#{job_id}"
     count = 0
+    j = nil
     begin
-      f = open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
-      j= JSON.parse f.read
+      open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') { |f| j = JSON.parse(f.read) }
     rescue
       puts "Failed to get the job at #{url}: #{$!}"
       j = nil
@@ -31,9 +31,9 @@ module DownloadJSON
 
   def self.get_build_json(build_id, parent_dir)
     url = "https://api.travis-ci.org/build/#{build_id}"
+    j = nil
     begin
-      f = open(url, 'Travis-API-Version' => '3', 'Authorization' => 'token C-cYiDyx1DUXq3rjwWXmoQ')
-      j = JSON.parse f.read
+      open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') { |f| j = JSON.parse(f.read) }
     rescue
       puts "Failed to get the build at #{url}: #{$!}"
       sleep 20
@@ -56,9 +56,9 @@ module DownloadJSON
   def self.get_builds_list(repo_id, offset, parent_dir)
     while offset
       url = "https://api.travis-ci.org/repo/#{repo_id}/builds?limit=25&offset=#{offset}"
+      j = nil
       begin
-        f = open(url, 'Travis-API-Version'=>'3', 'Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
-        j = JSON.parse f.read
+        open(url,'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') { |f| j = JSON.parse(f.read) }
       rescue
         puts "Failed to get the repo builds list at #{url}: #{$!}"
         sleep 20
@@ -82,9 +82,9 @@ module DownloadJSON
   def self.get_repo_id(repo_name, parent_dir)
     repo_slug = repo_name.sub(/\//,'%2F')
     count=0
+    j = nil
     begin
-      f = open("https://api.travis-ci.org/repo/#{repo_slug}",'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ')
-      j = JSON.parse f.read
+      open("https://api.travis-ci.org/repo/#{repo_slug}",'Travis-API-Version'=>'3','Authorization'=>'token C-cYiDyx1DUXq3rjwWXmoQ') { |f| j = JSON.parse(f.read) }
     rescue
       puts "Failed to get the repo id of #{repo_name}: #{$!}"
       sleep 20
@@ -134,7 +134,7 @@ module DownloadJSON
 
   def self.run
     Thread.abort_on_exception = true
-    scan_repos(1, 50, 25)
+    scan_repos(450000, 50, 25)
   end  
 end
 DownloadJSON.run
