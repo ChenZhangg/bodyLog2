@@ -32,7 +32,7 @@ module DownloadLog
 
   def self.parse_job_json_file(job_file_path)
     log_file_path = job_file_path.sub(/json_files/, 'build_logs').sub(/job@/,'').sub(/\.json/,'.log')
-    return if File.size?(log_file_path)
+    return if File.size?(log_file_path) && File.size?(log_file_path) >= 150
     puts "#{job_file_path}\n#{log_file_path}\n\n"
     begin
       j = JSON.parse IO.read(job_file_path)
