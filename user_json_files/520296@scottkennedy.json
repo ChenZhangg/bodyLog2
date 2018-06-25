@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/520296",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 520296,
+  "login": "scottkennedy",
+  "name": "Scott Kennedy",
+  "github_id": 881690,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/881690?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T15:18:03Z"
+}

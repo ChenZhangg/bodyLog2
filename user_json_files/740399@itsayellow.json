@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/740399",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 740399,
+  "login": "itsayellow",
+  "name": null,
+  "github_id": 12565784,
+  "avatar_url": "https://avatars.githubusercontent.com/u/12565784?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

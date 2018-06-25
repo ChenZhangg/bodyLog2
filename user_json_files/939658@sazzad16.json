@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/939658",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 939658,
+  "login": "sazzad16",
+  "name": "M Sazzadul Hoque",
+  "github_id": 7600764,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/7600764?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T18:53:34Z"
+}

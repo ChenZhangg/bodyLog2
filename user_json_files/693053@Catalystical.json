@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/693053",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 693053,
+  "login": "Catalystical",
+  "name": null,
+  "github_id": 15424893,
+  "avatar_url": "https://avatars.githubusercontent.com/u/15424893?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

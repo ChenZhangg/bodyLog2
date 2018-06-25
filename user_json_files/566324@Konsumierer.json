@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/566324",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 566324,
+  "login": "Konsumierer",
+  "name": null,
+  "github_id": 1468989,
+  "avatar_url": "https://secure.gravatar.com/avatar/af185b828c073607a2089d2b75156920?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

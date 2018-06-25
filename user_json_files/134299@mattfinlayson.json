@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/134299",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 134299,
+  "login": "mattfinlayson",
+  "name": "Matthew Finlayson",
+  "github_id": 177732,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/177732?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-04-11T16:41:08Z"
+}

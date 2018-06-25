@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/941137",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 941137,
+  "login": "dinelia",
+  "name": null,
+  "github_id": 19653978,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/19653978?v=4",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

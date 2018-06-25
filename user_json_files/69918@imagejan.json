@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/69918",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 69918,
+  "login": "imagejan",
+  "name": "Jan Eglinger",
+  "github_id": 2033938,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/2033938?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:09:04Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/36084",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 36084,
+  "login": "Vandalko",
+  "name": "Oleksandr",
+  "github_id": 1898060,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1898060?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T01:00:33Z"
+}

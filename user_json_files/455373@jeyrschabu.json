@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/455373",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 455373,
+  "login": "jeyrschabu",
+  "name": "Jeyrs Chabu",
+  "github_id": 1572759,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1572759?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T13:23:19Z"
+}

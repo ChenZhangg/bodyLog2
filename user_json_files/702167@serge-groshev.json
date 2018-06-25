@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/702167",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 702167,
+  "login": "serge-groshev",
+  "name": null,
+  "github_id": 16083993,
+  "avatar_url": "https://avatars.githubusercontent.com/u/16083993?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/20713",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 20713,
+  "login": "emmby",
+  "name": "Mike Burton",
+  "github_id": 310880,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/310880?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:35:22Z"
+}

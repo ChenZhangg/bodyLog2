@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/169392",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 169392,
+  "login": "hinerm",
+  "name": "Mark Hiner",
+  "github_id": 1123809,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/1123809?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T05:13:25Z"
+}

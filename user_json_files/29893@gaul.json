@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/29893",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 29893,
+  "login": "gaul",
+  "name": "Andrew Gaul",
+  "github_id": 848247,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/848247?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:50:39Z"
+}

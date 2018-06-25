@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/33623",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 33623,
+  "login": "johnjohndoe",
+  "name": "Tobias Preuss",
+  "github_id": 144518,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/144518?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:56:22Z"
+}

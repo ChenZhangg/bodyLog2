@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/548138",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 548138,
+  "login": "dgault",
+  "name": "David Gault",
+  "github_id": 1628865,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/1628865?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T16:06:02Z"
+}

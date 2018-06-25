@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/83279",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 83279,
+  "login": "sephiroth74",
+  "name": "Alessandro Crugnola",
+  "github_id": 823858,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/823858?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:41:30Z"
+}

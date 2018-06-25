@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/670988",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 670988,
+  "login": "antonio-tomac",
+  "name": null,
+  "github_id": 5103070,
+  "avatar_url": "https://avatars.githubusercontent.com/u/5103070?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

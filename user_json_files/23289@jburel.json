@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/23289",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 23289,
+  "login": "jburel",
+  "name": "jean-marie burel",
+  "github_id": 1022396,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/1022396?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:39:38Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/113362",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 113362,
+  "login": "netflixgithub",
+  "name": null,
+  "github_id": 1377015,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/1377015?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T03:55:29Z"
+}

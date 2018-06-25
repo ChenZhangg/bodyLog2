@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/44473",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 44473,
+  "login": "rleigh-dundee",
+  "name": "Roger Leigh",
+  "github_id": 1528953,
+  "avatar_url": "https://0.gravatar.com/avatar/e893a2912e39b821d2e51230f328bd75",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2016-09-13T02:29:51Z"
+}

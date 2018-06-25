@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/414819",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 414819,
+  "login": "mr-archano",
+  "name": "Antonio Bertucci",
+  "github_id": 1069201,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1069201?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T12:11:26Z"
+}

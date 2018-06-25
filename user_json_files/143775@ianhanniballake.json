@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/143775",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 143775,
+  "login": "ianhanniballake",
+  "name": null,
+  "github_id": 517315,
+  "avatar_url": null,
+  "education": null,
+  "is_syncing": false,
+  "synced_at": "2016-09-13T08:07:29Z"
+}

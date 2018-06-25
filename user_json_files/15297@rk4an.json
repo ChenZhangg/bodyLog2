@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/15297",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 15297,
+  "login": "rk4an",
+  "name": "Erkan",
+  "github_id": 322320,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/322320?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:26:11Z"
+}

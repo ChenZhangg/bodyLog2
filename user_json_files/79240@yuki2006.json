@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/79240",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 79240,
+  "login": "yuki2006",
+  "name": "yuki2006",
+  "github_id": 1004620,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1004620?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:31:28Z"
+}

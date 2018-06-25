@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/182699",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 182699,
+  "login": "pwalczysko",
+  "name": null,
+  "github_id": 2478303,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/2478303?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T05:19:44Z"
+}

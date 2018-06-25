@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/235713",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 235713,
+  "login": "ChrisSmith",
+  "name": null,
+  "github_id": 680966,
+  "avatar_url": null,
+  "education": null,
+  "is_syncing": false,
+  "synced_at": "2016-09-13T13:20:22Z"
+}

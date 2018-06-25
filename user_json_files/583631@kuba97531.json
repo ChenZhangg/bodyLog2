@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/583631",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 583631,
+  "login": "kuba97531",
+  "name": null,
+  "github_id": 133693,
+  "avatar_url": "https://1.gravatar.com/avatar/fcf0c9b9fec3071c8ab1e7f15d8fe2cb?d=https%3A%2F%2Fidenticons.github.com%2F734ce2faaac38c2b457d0bfd2523ddb2.png",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

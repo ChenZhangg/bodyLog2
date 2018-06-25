@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/74450",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 74450,
+  "login": "mauhiz",
+  "name": "Vincent PÉRICART",
+  "github_id": 1818187,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1818187?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:19:41Z"
+}

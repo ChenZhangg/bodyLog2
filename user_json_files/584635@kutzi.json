@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/584635",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 584635,
+  "login": "kutzi",
+  "name": null,
+  "github_id": 175061,
+  "avatar_url": "https://0.gravatar.com/avatar/6b1ddbbd68356af130cd7d28ee5ba2d2?d=https%3A%2F%2Fidenticons.github.com%2F3690d82269ac80f351aaadc17442d671.png",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

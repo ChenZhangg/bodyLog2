@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/697994",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 697994,
+  "login": "mkitti",
+  "name": null,
+  "github_id": 8062771,
+  "avatar_url": "https://avatars.githubusercontent.com/u/8062771?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

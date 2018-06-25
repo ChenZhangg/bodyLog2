@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/33887",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 33887,
+  "login": "TangKe",
+  "name": "TangKe",
+  "github_id": 1138688,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1138688?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:57:06Z"
+}

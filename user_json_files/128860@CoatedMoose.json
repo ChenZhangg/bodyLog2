@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/128860",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 128860,
+  "login": "CoatedMoose",
+  "name": "Andrew Crichton",
+  "github_id": 713361,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/713361?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T04:34:19Z"
+}

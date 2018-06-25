@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/658510",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 658510,
+  "login": "zhouhuabin",
+  "name": null,
+  "github_id": 3291551,
+  "avatar_url": "https://avatars.githubusercontent.com/u/3291551?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

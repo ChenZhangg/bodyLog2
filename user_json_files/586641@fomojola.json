@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/586641",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 586641,
+  "login": "fomojola",
+  "name": null,
+  "github_id": 264253,
+  "avatar_url": "https://1.gravatar.com/avatar/cac0691bec646091035184b7e647145e?d=https%3A%2F%2Fidenticons.github.com%2Febfddda6970a171c5a22910908743187.png",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

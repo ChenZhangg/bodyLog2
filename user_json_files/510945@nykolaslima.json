@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/510945",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 510945,
+  "login": "nykolaslima",
+  "name": null,
+  "github_id": 1128572,
+  "avatar_url": null,
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

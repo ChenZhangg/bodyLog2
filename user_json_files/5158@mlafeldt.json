@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/5158",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 5158,
+  "login": "mlafeldt",
+  "name": "Mathias Lafeldt",
+  "github_id": 158074,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/158074?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:10:44Z"
+}

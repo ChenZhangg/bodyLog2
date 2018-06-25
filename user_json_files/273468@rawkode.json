@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/273468",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 273468,
+  "login": "rawkode",
+  "name": "David McKay",
+  "github_id": 145816,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/145816?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T07:58:42Z"
+}

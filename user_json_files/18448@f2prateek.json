@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/18448",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 18448,
+  "login": "f2prateek",
+  "name": "Prateek Srivastava",
+  "github_id": 843979,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/843979?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:32:03Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/836863",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 836863,
+  "login": "paulrichards321",
+  "name": null,
+  "github_id": 1509906,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1509906?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/969277",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 969277,
+  "login": "yapei123",
+  "name": null,
+  "github_id": 31902852,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/31902852?v=4",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

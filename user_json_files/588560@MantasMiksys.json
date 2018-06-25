@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/588560",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 588560,
+  "login": "MantasMiksys",
+  "name": "Mantas",
+  "github_id": 5822330,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/5822330?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T16:18:06Z"
+}

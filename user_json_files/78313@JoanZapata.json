@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/78313",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 78313,
+  "login": "JoanZapata",
+  "name": "Joan Zapata",
+  "github_id": 675408,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/675408?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:29:08Z"
+}

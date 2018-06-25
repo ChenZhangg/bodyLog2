@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/24146",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 24146,
+  "login": "mp911de",
+  "name": "Mark Paluch",
+  "github_id": 1035015,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1035015?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:41:20Z"
+}

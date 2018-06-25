@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/1103902",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 1103902,
+  "login": "timstorer",
+  "name": null,
+  "github_id": 35099535,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/35099535?v=4",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

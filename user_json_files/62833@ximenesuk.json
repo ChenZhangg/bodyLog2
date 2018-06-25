@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/62833",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 62833,
+  "login": "ximenesuk",
+  "name": "Colin Blackburn",
+  "github_id": 1065145,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1065145?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T01:51:13Z"
+}

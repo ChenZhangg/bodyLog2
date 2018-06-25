@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/19265",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 19265,
+  "login": "googolmo",
+  "name": "Moyang Wang",
+  "github_id": 470128,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/470128?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:33:23Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/658989",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 658989,
+  "login": "tp81",
+  "name": "Thomas Pengo",
+  "github_id": 3975447,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/3975447?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T16:29:47Z"
+}

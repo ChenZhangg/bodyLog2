@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/16209",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 16209,
+  "login": "JakeWharton",
+  "name": "Jake Wharton",
+  "github_id": 66577,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/66577?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:27:51Z"
+}

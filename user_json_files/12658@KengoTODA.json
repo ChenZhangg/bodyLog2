@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/12658",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 12658,
+  "login": "KengoTODA",
+  "name": "Kengo TODA",
+  "github_id": 505751,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/505751?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:22:14Z"
+}

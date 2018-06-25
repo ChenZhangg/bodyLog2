@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/908136",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 908136,
+  "login": "pechenoha",
+  "name": "Vadym",
+  "github_id": 5446148,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/5446148?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T18:20:01Z"
+}

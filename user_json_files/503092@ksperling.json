@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/503092",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 503092,
+  "login": "ksperling",
+  "name": "Karsten Sperling",
+  "github_id": 794414,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/794414?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T14:47:37Z"
+}

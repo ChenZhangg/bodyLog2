@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/68072",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 68072,
+  "login": "bpindelski",
+  "name": "Blazej Pindelski",
+  "github_id": 1692189,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/1692189?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:04:15Z"
+}

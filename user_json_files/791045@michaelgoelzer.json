@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/791045",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 791045,
+  "login": "michaelgoelzer",
+  "name": null,
+  "github_id": 18674959,
+  "avatar_url": "https://avatars.githubusercontent.com/u/18674959?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

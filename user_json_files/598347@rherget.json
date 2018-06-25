@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/598347",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 598347,
+  "login": "rherget",
+  "name": null,
+  "github_id": 3535302,
+  "avatar_url": "https://avatars.githubusercontent.com/u/3535302",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

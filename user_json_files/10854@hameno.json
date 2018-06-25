@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/10854",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 10854,
+  "login": "hameno",
+  "name": "Philip Schiffer",
+  "github_id": 365084,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/365084?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:19:03Z"
+}

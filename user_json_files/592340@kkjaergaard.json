@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/592340",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 592340,
+  "login": "kkjaergaard",
+  "name": null,
+  "github_id": 6259608,
+  "avatar_url": "https://gravatar.com/avatar/956c2020a95b7eb465472eaf2d07a5d6?d=https%3A%2F%2Fidenticons.github.com%2Fee53039c096c52aab05a460cb50548b0.png&r=x",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

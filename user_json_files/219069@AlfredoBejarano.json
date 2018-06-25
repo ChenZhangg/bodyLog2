@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/219069",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 219069,
+  "login": "AlfredoBejarano",
+  "name": "Alfredo Bejarano",
+  "github_id": 8674414,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/8674414?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T06:19:52Z"
+}

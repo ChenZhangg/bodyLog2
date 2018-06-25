@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/888504",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 888504,
+  "login": "GeorgeSJWang",
+  "name": null,
+  "github_id": 6948276,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/6948276?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/121460",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 121460,
+  "login": "xiaoligit",
+  "name": null,
+  "github_id": 10524776,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/10524776?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T04:15:43Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/1113670",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 1113670,
+  "login": "ragabar",
+  "name": null,
+  "github_id": 35488675,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/35488675?v=4",
+  "education": null,
+  "is_syncing": null,
+  "synced_at": null
+}

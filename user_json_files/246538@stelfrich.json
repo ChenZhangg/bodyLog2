@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/246538",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 246538,
+  "login": "stelfrich",
+  "name": "Stefan Helfrich",
+  "github_id": 333358,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/333358?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T07:10:14Z"
+}

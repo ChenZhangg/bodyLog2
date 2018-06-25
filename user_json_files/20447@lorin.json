@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/20447",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 20447,
+  "login": "lorin",
+  "name": "Lorin Hochstein",
+  "github_id": 446305,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/446305?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:35:34Z"
+}

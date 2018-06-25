@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/48118",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 48118,
+  "login": "chris-allan",
+  "name": "Chris Allan",
+  "github_id": 487082,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/487082?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T01:20:38Z"
+}

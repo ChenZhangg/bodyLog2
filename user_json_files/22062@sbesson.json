@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/22062",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 22062,
+  "login": "sbesson",
+  "name": "Sébastien Besson",
+  "github_id": 1355463,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/1355463?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:38:06Z"
+}

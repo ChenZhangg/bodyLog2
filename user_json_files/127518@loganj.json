@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/127518",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 127518,
+  "login": "loganj",
+  "name": "Logan Johnson",
+  "github_id": 18877,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/18877?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T04:30:39Z"
+}

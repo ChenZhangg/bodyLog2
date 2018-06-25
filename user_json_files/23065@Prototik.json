@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/23065",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 23065,
+  "login": "Prototik",
+  "name": "Sergey Shatunov",
+  "github_id": 1416030,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1416030?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:39:23Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/1263558",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 1263558,
+  "login": "jarmond",
+  "name": null,
+  "github_id": 739076,
+  "avatar_url": null,
+  "education": null,
+  "is_syncing": null,
+  "synced_at": null
+}

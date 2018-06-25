@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/958905",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 958905,
+  "login": "thusharaw",
+  "name": null,
+  "github_id": 21246461,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/21246461?v=4",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

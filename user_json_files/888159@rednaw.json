@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/888159",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 888159,
+  "login": "rednaw",
+  "name": null,
+  "github_id": 7900137,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/7900137?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

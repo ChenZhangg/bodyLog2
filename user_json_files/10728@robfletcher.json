@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/10728",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 10728,
+  "login": "robfletcher",
+  "name": "Rob Fletcher",
+  "github_id": 95210,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/95210?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:18:55Z"
+}

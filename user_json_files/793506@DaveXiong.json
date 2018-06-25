@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/793506",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 793506,
+  "login": "DaveXiong",
+  "name": "Dave Xiong",
+  "github_id": 4973100,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/4973100?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T16:59:44Z"
+}

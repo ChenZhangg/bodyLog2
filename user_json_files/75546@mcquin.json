@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/75546",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 75546,
+  "login": "mcquin",
+  "name": "Claire McQuin",
+  "github_id": 4721755,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/4721755?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:22:44Z"
+}

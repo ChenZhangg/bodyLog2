@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/64065",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 64065,
+  "login": "xetorthio",
+  "name": "Jonathan Leibiusky",
+  "github_id": 139687,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/139687?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T01:54:46Z"
+}

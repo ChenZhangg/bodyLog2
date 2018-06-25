@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/601811",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 601811,
+  "login": "PaulVanSchayck",
+  "name": null,
+  "github_id": 6281107,
+  "avatar_url": "https://avatars.githubusercontent.com/u/6281107?",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

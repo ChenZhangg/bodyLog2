@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/79071",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 79071,
+  "login": "jmuhlich",
+  "name": "Jeremy Muhlich",
+  "github_id": 277154,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/277154?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T02:31:17Z"
+}

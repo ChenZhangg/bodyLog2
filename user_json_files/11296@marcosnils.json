@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/11296",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 11296,
+  "login": "marcosnils",
+  "name": "Marcos Nils",
+  "github_id": 1578458,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/1578458?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:19:49Z"
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/529685",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 529685,
+  "login": "hkokocin",
+  "name": "Hendrik",
+  "github_id": 1969876,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/1969876?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T15:34:45Z"
+}

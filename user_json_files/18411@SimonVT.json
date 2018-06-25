@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/18411",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 18411,
+  "login": "SimonVT",
+  "name": "Simon Vig Therkildsen",
+  "github_id": 549365,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/549365?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T00:31:50Z"
+}

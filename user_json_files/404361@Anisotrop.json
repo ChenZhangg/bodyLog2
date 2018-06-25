@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/404361",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 404361,
+  "login": "Anisotrop",
+  "name": "Costin Chiriac",
+  "github_id": 13450862,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/13450862?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-24T11:52:11Z"
+}

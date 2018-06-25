@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/334822",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 334822,
+  "login": "rosswilson",
+  "name": "Ross Wilson",
+  "github_id": 1176711,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1176711?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T09:48:56Z"
+}

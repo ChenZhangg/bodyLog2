@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/120059",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 120059,
+  "login": "cketti",
+  "name": "cketti",
+  "github_id": 218061,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/218061?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T04:12:11Z"
+}

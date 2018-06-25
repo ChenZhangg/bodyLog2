@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/636823",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 636823,
+  "login": "itugs",
+  "name": null,
+  "github_id": 230661,
+  "avatar_url": "https://avatars.githubusercontent.com/u/230661?v=3",
+  "education": null,
+  "is_syncing": false,
+  "synced_at": null
+}

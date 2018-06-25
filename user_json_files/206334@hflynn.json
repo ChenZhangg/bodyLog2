@@ -1,0 +1,17 @@
+{
+  "@type": "user",
+  "@href": "/user/206334",
+  "@representation": "standard",
+  "@permissions": {
+    "read": true,
+    "sync": false
+  },
+  "id": 206334,
+  "login": "hflynn",
+  "name": "H Flynn",
+  "github_id": 2368904,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/2368904?v=4",
+  "education": false,
+  "is_syncing": false,
+  "synced_at": "2018-06-25T05:57:26Z"
+}
