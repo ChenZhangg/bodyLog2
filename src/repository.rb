@@ -1,6 +1,6 @@
 require 'active_record'
 require 'activerecord-jdbcmysql-adapter'
-class TravisJavaRepository < ActiveRecord::Base
+class Repository < ActiveRecord::Base
   establish_connection(
       adapter:  "mysql",
       host:     "10.131.252.160",

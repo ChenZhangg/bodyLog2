@@ -1,0 +1,2141 @@
+[
+  {
+    "sha": "db2c929d32dd25b2ee2d26a543385760cbedf4a0",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmRiMmM5MjlkMzJkZDI1YjJlZTJkMjZhNTQzMzg1NzYwY2JlZGY0YTA=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T12:27:20Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T12:27:20Z"
+      },
+      "message": "20:27",
+      "tree": {
+        "sha": "6a3a8676f0738d4c96d2ad5bfb854e8a66882857",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/6a3a8676f0738d4c96d2ad5bfb854e8a66882857"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/db2c929d32dd25b2ee2d26a543385760cbedf4a0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/db2c929d32dd25b2ee2d26a543385760cbedf4a0",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/db2c929d32dd25b2ee2d26a543385760cbedf4a0",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/db2c929d32dd25b2ee2d26a543385760cbedf4a0/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a071dd7c550657b22f96c5921aa53255bee00d36",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a071dd7c550657b22f96c5921aa53255bee00d36",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/a071dd7c550657b22f96c5921aa53255bee00d36"
+      }
+    ]
+  },
+  {
+    "sha": "a071dd7c550657b22f96c5921aa53255bee00d36",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmEwNzFkZDdjNTUwNjU3YjIyZjk2YzU5MjFhYTUzMjU1YmVlMDBkMzY=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T12:16:41Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T12:16:41Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "fc269df052b1f40996ec67f2fe5a779b9875f5c7",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/fc269df052b1f40996ec67f2fe5a779b9875f5c7"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/a071dd7c550657b22f96c5921aa53255bee00d36",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a071dd7c550657b22f96c5921aa53255bee00d36",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/a071dd7c550657b22f96c5921aa53255bee00d36",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a071dd7c550657b22f96c5921aa53255bee00d36/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/0d0f1e1398744c6a6f7b3732ed372c694a0942a7"
+      }
+    ]
+  },
+  {
+    "sha": "0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjBkMGYxZTEzOTg3NDRjNmE2ZjdiMzczMmVkMzcyYzY5NGEwOTQyYTc=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:33:17Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:33:17Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "e0698d8f0839a4fcf3b00830b2645900d439c066",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/e0698d8f0839a4fcf3b00830b2645900d439c066"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/0d0f1e1398744c6a6f7b3732ed372c694a0942a7",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/0d0f1e1398744c6a6f7b3732ed372c694a0942a7/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d"
+      }
+    ]
+  },
+  {
+    "sha": "d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmQ1ZWFjYjA5ZjhkNDUxZWYwNjI0NmI0YmIzNGI5Nzk1ZTBiZmExMmQ=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:31:46Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:31:46Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "424985ab75f217a30653d64e7f8009142209246a",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/424985ab75f217a30653d64e7f8009142209246a"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/d5eacb09f8d451ef06246b4bb34b9795e0bfa12d/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "17e2528043286b92ab9e9afb6056f0f58733e75c",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/17e2528043286b92ab9e9afb6056f0f58733e75c",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/17e2528043286b92ab9e9afb6056f0f58733e75c"
+      }
+    ]
+  },
+  {
+    "sha": "17e2528043286b92ab9e9afb6056f0f58733e75c",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjE3ZTI1MjgwNDMyODZiOTJhYjllOWFmYjYwNTZmMGY1ODczM2U3NWM=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:30:58Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:30:58Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "345d19c68aaf548bec628c7a9867e2406fcd9ef6",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/345d19c68aaf548bec628c7a9867e2406fcd9ef6"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/17e2528043286b92ab9e9afb6056f0f58733e75c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/17e2528043286b92ab9e9afb6056f0f58733e75c",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/17e2528043286b92ab9e9afb6056f0f58733e75c",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/17e2528043286b92ab9e9afb6056f0f58733e75c/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1ecad231a62dd3a534d397069a27944954aeac7f",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/1ecad231a62dd3a534d397069a27944954aeac7f",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/1ecad231a62dd3a534d397069a27944954aeac7f"
+      }
+    ]
+  },
+  {
+    "sha": "1ecad231a62dd3a534d397069a27944954aeac7f",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjFlY2FkMjMxYTYyZGQzYTUzNGQzOTcwNjlhMjc5NDQ5NTRhZWFjN2Y=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:27:01Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:27:01Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "8652e95025b3db5da9d25e481aa722fbaa5f3ae9",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/8652e95025b3db5da9d25e481aa722fbaa5f3ae9"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/1ecad231a62dd3a534d397069a27944954aeac7f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/1ecad231a62dd3a534d397069a27944954aeac7f",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/1ecad231a62dd3a534d397069a27944954aeac7f",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/1ecad231a62dd3a534d397069a27944954aeac7f/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "998a336f654243eee61e0dcae95fba9b16c1f293",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/998a336f654243eee61e0dcae95fba9b16c1f293",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/998a336f654243eee61e0dcae95fba9b16c1f293"
+      }
+    ]
+  },
+  {
+    "sha": "998a336f654243eee61e0dcae95fba9b16c1f293",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjk5OGEzMzZmNjU0MjQzZWVlNjFlMGRjYWU5NWZiYTliMTZjMWYyOTM=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:25:18Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:25:18Z"
+      },
+      "message": "Merge branch 'develop'\n\nmerge develop",
+      "tree": {
+        "sha": "3fdd348223f3b2e6397c86f4c6c65f60760def34",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/3fdd348223f3b2e6397c86f4c6c65f60760def34"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/998a336f654243eee61e0dcae95fba9b16c1f293",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/998a336f654243eee61e0dcae95fba9b16c1f293",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/998a336f654243eee61e0dcae95fba9b16c1f293",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/998a336f654243eee61e0dcae95fba9b16c1f293/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "234abc2333014cbe7f29b27f29b33604e030eebd",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/234abc2333014cbe7f29b27f29b33604e030eebd",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/234abc2333014cbe7f29b27f29b33604e030eebd"
+      },
+      {
+        "sha": "ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/ada1abd97ea4bea246a7ae695892dd3ad6e2298a"
+      }
+    ]
+  },
+  {
+    "sha": "ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmFkYTFhYmQ5N2VhNGJlYTI0NmE3YWU2OTU4OTJkZDNhZDZlMjI5OGE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:23:24Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:23:24Z"
+      },
+      "message": "19:23",
+      "tree": {
+        "sha": "63a0ef275fbae174945312eb4dc08916836bd12a",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/63a0ef275fbae174945312eb4dc08916836bd12a"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/ada1abd97ea4bea246a7ae695892dd3ad6e2298a",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/ada1abd97ea4bea246a7ae695892dd3ad6e2298a/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e2795027a9899ed4b0e9441d0af637539853e612",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e2795027a9899ed4b0e9441d0af637539853e612",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/e2795027a9899ed4b0e9441d0af637539853e612"
+      }
+    ]
+  },
+  {
+    "sha": "234abc2333014cbe7f29b27f29b33604e030eebd",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjIzNGFiYzIzMzMwMTRjYmU3ZjI5YjI3ZjI5YjMzNjA0ZTAzMGVlYmQ=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:18:28Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:18:28Z"
+      },
+      "message": "dev 19:16",
+      "tree": {
+        "sha": "29c48afb8d4e6d9655424fa9dcacda4665278520",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/29c48afb8d4e6d9655424fa9dcacda4665278520"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/234abc2333014cbe7f29b27f29b33604e030eebd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/234abc2333014cbe7f29b27f29b33604e030eebd",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/234abc2333014cbe7f29b27f29b33604e030eebd",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/234abc2333014cbe7f29b27f29b33604e030eebd/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8e343611efa7f8b2f449a359c2f0be59810261e1",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/8e343611efa7f8b2f449a359c2f0be59810261e1",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/8e343611efa7f8b2f449a359c2f0be59810261e1"
+      },
+      {
+        "sha": "e2795027a9899ed4b0e9441d0af637539853e612",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e2795027a9899ed4b0e9441d0af637539853e612",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/e2795027a9899ed4b0e9441d0af637539853e612"
+      }
+    ]
+  },
+  {
+    "sha": "8e343611efa7f8b2f449a359c2f0be59810261e1",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjhlMzQzNjExZWZhN2Y4YjJmNDQ5YTM1OWMyZjBiZTU5ODEwMjYxZTE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:16:44Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T11:16:44Z"
+      },
+      "message": "msater 19:16",
+      "tree": {
+        "sha": "67f139ebc9c3bab1573b3835b50df58a5d69fbbd",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/67f139ebc9c3bab1573b3835b50df58a5d69fbbd"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/8e343611efa7f8b2f449a359c2f0be59810261e1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/8e343611efa7f8b2f449a359c2f0be59810261e1",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/8e343611efa7f8b2f449a359c2f0be59810261e1",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/8e343611efa7f8b2f449a359c2f0be59810261e1/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7c6e44802a5d512a6979279f6fab26864d5d6c60",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/7c6e44802a5d512a6979279f6fab26864d5d6c60",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/7c6e44802a5d512a6979279f6fab26864d5d6c60"
+      }
+    ]
+  },
+  {
+    "sha": "e2795027a9899ed4b0e9441d0af637539853e612",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmUyNzk1MDI3YTk4OTllZDRiMGU5NDQxZDBhZjYzNzUzOTg1M2U2MTI=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T06:42:22Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T06:42:22Z"
+      },
+      "message": "14:42",
+      "tree": {
+        "sha": "96fc3a4b07af69b256b1aa6e7a9e7caac07fc67d",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/96fc3a4b07af69b256b1aa6e7a9e7caac07fc67d"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/e2795027a9899ed4b0e9441d0af637539853e612",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e2795027a9899ed4b0e9441d0af637539853e612",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/e2795027a9899ed4b0e9441d0af637539853e612",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e2795027a9899ed4b0e9441d0af637539853e612/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/e70ba0166a20947fcc91f8698a12cbe3e55912f6"
+      }
+    ]
+  },
+  {
+    "sha": "e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmU3MGJhMDE2NmEyMDk0N2ZjYzkxZjg2OThhMTJjYmUzZTU1OTEyZjY=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T03:12:33Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T03:12:33Z"
+      },
+      "message": "11:12",
+      "tree": {
+        "sha": "aa1b9f282ef412ecb5091fc6123e748ec6f5e861",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/aa1b9f282ef412ecb5091fc6123e748ec6f5e861"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/e70ba0166a20947fcc91f8698a12cbe3e55912f6",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/e70ba0166a20947fcc91f8698a12cbe3e55912f6/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "745110cfa3aed6e631f98940a06fed0539cafa23",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/745110cfa3aed6e631f98940a06fed0539cafa23",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/745110cfa3aed6e631f98940a06fed0539cafa23"
+      }
+    ]
+  },
+  {
+    "sha": "745110cfa3aed6e631f98940a06fed0539cafa23",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjc0NTExMGNmYTNhZWQ2ZTYzMWY5ODk0MGEwNmZlZDA1MzljYWZhMjM=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:39:30Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:39:30Z"
+      },
+      "message": "10:39",
+      "tree": {
+        "sha": "b2e239de02118bba6d67611bd532a74a6b582b93",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/b2e239de02118bba6d67611bd532a74a6b582b93"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/745110cfa3aed6e631f98940a06fed0539cafa23",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/745110cfa3aed6e631f98940a06fed0539cafa23",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/745110cfa3aed6e631f98940a06fed0539cafa23",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/745110cfa3aed6e631f98940a06fed0539cafa23/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa"
+      }
+    ]
+  },
+  {
+    "sha": "c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmM3MmY0OTJkYmViZGQ4MGE1MjM3YmIwNDAwMmViMmE5ZmM0MWY0ZmE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:20:25Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:20:25Z"
+      },
+      "message": "10:16",
+      "tree": {
+        "sha": "9f9a8dede23bf9333387a14971e8e0f5db8b457d",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/9f9a8dede23bf9333387a14971e8e0f5db8b457d"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/c72f492dbebdd80a5237bb04002eb2a9fc41f4fa/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4"
+      }
+    ]
+  },
+  {
+    "sha": "fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmZlZDM5YzY5YjU0M2RmYmI5ZTdjYzAxOGZhZjM5ZThjMmI4NzY0ZTQ=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:16:45Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T02:16:45Z"
+      },
+      "message": "10:16",
+      "tree": {
+        "sha": "c021d4eaf7562e91e31d2a2001a79d9d23716110",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/c021d4eaf7562e91e31d2a2001a79d9d23716110"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/fed39c69b543dfbb9e7cc018faf39e8c2b8764e4/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b47c9031011ddb6d732e3c09cd74a016ee416067",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b47c9031011ddb6d732e3c09cd74a016ee416067",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/b47c9031011ddb6d732e3c09cd74a016ee416067"
+      }
+    ]
+  },
+  {
+    "sha": "b47c9031011ddb6d732e3c09cd74a016ee416067",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmI0N2M5MDMxMDExZGRiNmQ3MzJlM2MwOWNkNzRhMDE2ZWU0MTYwNjc=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T00:54:40Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-15T00:54:40Z"
+      },
+      "message": "20:54",
+      "tree": {
+        "sha": "e1cc06ee904f6223784233cfe2b8b923f3a1df1f",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/e1cc06ee904f6223784233cfe2b8b923f3a1df1f"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/b47c9031011ddb6d732e3c09cd74a016ee416067",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b47c9031011ddb6d732e3c09cd74a016ee416067",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/b47c9031011ddb6d732e3c09cd74a016ee416067",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b47c9031011ddb6d732e3c09cd74a016ee416067/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b464e6a684513072f7fe095e6cc6e49053b16610",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b464e6a684513072f7fe095e6cc6e49053b16610",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/b464e6a684513072f7fe095e6cc6e49053b16610"
+      }
+    ]
+  },
+  {
+    "sha": "b464e6a684513072f7fe095e6cc6e49053b16610",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmI0NjRlNmE2ODQ1MTMwNzJmN2ZlMDk1ZTZjYzZlNDkwNTNiMTY2MTA=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T13:24:11Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T13:24:11Z"
+      },
+      "message": "21:24",
+      "tree": {
+        "sha": "14031510e7f87df4edff0501053770a9ede1c0fc",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/14031510e7f87df4edff0501053770a9ede1c0fc"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/b464e6a684513072f7fe095e6cc6e49053b16610",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b464e6a684513072f7fe095e6cc6e49053b16610",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/b464e6a684513072f7fe095e6cc6e49053b16610",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b464e6a684513072f7fe095e6cc6e49053b16610/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7c6e44802a5d512a6979279f6fab26864d5d6c60",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/7c6e44802a5d512a6979279f6fab26864d5d6c60",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/7c6e44802a5d512a6979279f6fab26864d5d6c60"
+      }
+    ]
+  },
+  {
+    "sha": "7c6e44802a5d512a6979279f6fab26864d5d6c60",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjdjNmU0NDgwMmE1ZDUxMmE2OTc5Mjc5ZjZmYWIyNjg2NGQ1ZDZjNjA=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T12:44:12Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T12:44:12Z"
+      },
+      "message": "20:44",
+      "tree": {
+        "sha": "88e3807badf673fe5e3a41681d22362b58034f03",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/88e3807badf673fe5e3a41681d22362b58034f03"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/7c6e44802a5d512a6979279f6fab26864d5d6c60",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/7c6e44802a5d512a6979279f6fab26864d5d6c60",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/7c6e44802a5d512a6979279f6fab26864d5d6c60",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/7c6e44802a5d512a6979279f6fab26864d5d6c60/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "00cb62e85b1ce654597b5c720592a730b256e073",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/00cb62e85b1ce654597b5c720592a730b256e073",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/00cb62e85b1ce654597b5c720592a730b256e073"
+      }
+    ]
+  },
+  {
+    "sha": "00cb62e85b1ce654597b5c720592a730b256e073",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjAwY2I2MmU4NWIxY2U2NTQ1OTdiNWM3MjA1OTJhNzMwYjI1NmUwNzM=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T11:45:52Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T11:45:52Z"
+      },
+      "message": "19:45",
+      "tree": {
+        "sha": "6d9a534ecb70c36c453db12b5071be96d32f8042",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/6d9a534ecb70c36c453db12b5071be96d32f8042"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/00cb62e85b1ce654597b5c720592a730b256e073",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/00cb62e85b1ce654597b5c720592a730b256e073",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/00cb62e85b1ce654597b5c720592a730b256e073",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/00cb62e85b1ce654597b5c720592a730b256e073/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7"
+      }
+    ]
+  },
+  {
+    "sha": "b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmI2ZWM0YmJmZjhmOTE1ZTVmNjJjN2NmOGZiNmY3ZmQ3MDczZmUzZjc=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T09:19:03Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-14T09:19:03Z"
+      },
+      "message": "17:18",
+      "tree": {
+        "sha": "69a3d718edf74304e2e645dfab856aaa3e07e53f",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/69a3d718edf74304e2e645dfab856aaa3e07e53f"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/b6ec4bbff8f915e5f62c7cf8fb6f7fd7073fe3f7/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "885b285f9a8625076d342e4d6d9cc8be0f564932",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/885b285f9a8625076d342e4d6d9cc8be0f564932",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/885b285f9a8625076d342e4d6d9cc8be0f564932"
+      }
+    ]
+  },
+  {
+    "sha": "885b285f9a8625076d342e4d6d9cc8be0f564932",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjg4NWIyODVmOWE4NjI1MDc2ZDM0MmU0ZDZkOWNjOGJlMGY1NjQ5MzI=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-13T07:30:18Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-13T07:30:18Z"
+      },
+      "message": "15:30",
+      "tree": {
+        "sha": "10c3a101439d401104f060ca727307e56b877538",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/10c3a101439d401104f060ca727307e56b877538"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/885b285f9a8625076d342e4d6d9cc8be0f564932",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/885b285f9a8625076d342e4d6d9cc8be0f564932",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/885b285f9a8625076d342e4d6d9cc8be0f564932",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/885b285f9a8625076d342e4d6d9cc8be0f564932/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/3d888e52745287dc70ff0af2ab0915ee8c1842c7"
+      }
+    ]
+  },
+  {
+    "sha": "3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjNkODg4ZTUyNzQ1Mjg3ZGM3MGZmMGFmMmFiMDkxNWVlOGMxODQyYzc=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-12T08:46:07Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-12T08:46:07Z"
+      },
+      "message": "16:46",
+      "tree": {
+        "sha": "2c035d87747c1341dbee904c4aac82e1586d66e7",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/2c035d87747c1341dbee904c4aac82e1586d66e7"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/3d888e52745287dc70ff0af2ab0915ee8c1842c7",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/3d888e52745287dc70ff0af2ab0915ee8c1842c7/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/a85a1633ebb9c59d0f7324329c22b877e7bd0caa"
+      }
+    ]
+  },
+  {
+    "sha": "a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmE4NWExNjMzZWJiOWM1OWQwZjczMjQzMjljMjJiODc3ZTdiZDBjYWE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-11T14:24:45Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-11T14:24:45Z"
+      },
+      "message": "22:24",
+      "tree": {
+        "sha": "bf5ff46f5a44b1e36bf4bb299d797535507cd225",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/bf5ff46f5a44b1e36bf4bb299d797535507cd225"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/a85a1633ebb9c59d0f7324329c22b877e7bd0caa",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a85a1633ebb9c59d0f7324329c22b877e7bd0caa/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "168153f829876b6dae2a9325125a4f9838dbffea",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/168153f829876b6dae2a9325125a4f9838dbffea",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/168153f829876b6dae2a9325125a4f9838dbffea"
+      }
+    ]
+  },
+  {
+    "sha": "168153f829876b6dae2a9325125a4f9838dbffea",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjE2ODE1M2Y4Mjk4NzZiNmRhZTJhOTMyNTEyNWE0Zjk4MzhkYmZmZWE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-08T02:18:20Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-08T02:18:20Z"
+      },
+      "message": "refactor",
+      "tree": {
+        "sha": "d1fcded8553e3137b08ed5eb41598b63c53b41d0",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/d1fcded8553e3137b08ed5eb41598b63c53b41d0"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/168153f829876b6dae2a9325125a4f9838dbffea",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/168153f829876b6dae2a9325125a4f9838dbffea",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/168153f829876b6dae2a9325125a4f9838dbffea",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/168153f829876b6dae2a9325125a4f9838dbffea/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a5be06ee1ea89fb54665f2fa854bdc671d736900",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a5be06ee1ea89fb54665f2fa854bdc671d736900",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/a5be06ee1ea89fb54665f2fa854bdc671d736900"
+      }
+    ]
+  },
+  {
+    "sha": "a5be06ee1ea89fb54665f2fa854bdc671d736900",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOmE1YmUwNmVlMWVhODlmYjU0NjY1ZjJmYTg1NGJkYzY3MWQ3MzY5MDA=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T14:32:34Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T14:32:34Z"
+      },
+      "message": "refactor code",
+      "tree": {
+        "sha": "2d090660b54f42b6b0fb567e637822e894f817fb",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/2d090660b54f42b6b0fb567e637822e894f817fb"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/a5be06ee1ea89fb54665f2fa854bdc671d736900",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a5be06ee1ea89fb54665f2fa854bdc671d736900",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/a5be06ee1ea89fb54665f2fa854bdc671d736900",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/a5be06ee1ea89fb54665f2fa854bdc671d736900/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2c87528e4c9ac665696242861df8aa6613576c5a",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/2c87528e4c9ac665696242861df8aa6613576c5a",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/2c87528e4c9ac665696242861df8aa6613576c5a"
+      }
+    ]
+  },
+  {
+    "sha": "2c87528e4c9ac665696242861df8aa6613576c5a",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjJjODc1MjhlNGM5YWM2NjU2OTYyNDI4NjFkZjhhYTY2MTM1NzZjNWE=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T11:44:52Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T11:44:52Z"
+      },
+      "message": "first commit",
+      "tree": {
+        "sha": "ddedff173e652ee62379d6cb4b296a36979e1501",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/ddedff173e652ee62379d6cb4b296a36979e1501"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/2c87528e4c9ac665696242861df8aa6613576c5a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/2c87528e4c9ac665696242861df8aa6613576c5a",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/2c87528e4c9ac665696242861df8aa6613576c5a",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/2c87528e4c9ac665696242861df8aa6613576c5a/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5763737b142be255dceb767fbd696b1b53e34b02",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/5763737b142be255dceb767fbd696b1b53e34b02",
+        "html_url": "https://github.com/ChenZhangg/autofix/commit/5763737b142be255dceb767fbd696b1b53e34b02"
+      }
+    ]
+  },
+  {
+    "sha": "5763737b142be255dceb767fbd696b1b53e34b02",
+    "node_id": "MDY6Q29tbWl0MTQwMDc3OTgzOjU3NjM3MzdiMTQyYmUyNTVkY2ViNzY3ZmJkNjk2YjFiNTNlMzRiMDI=",
+    "commit": {
+      "author": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T11:21:22Z"
+      },
+      "committer": {
+        "name": "zc",
+        "email": "340355960@qq.com",
+        "date": "2018-07-07T11:21:22Z"
+      },
+      "message": "first commit",
+      "tree": {
+        "sha": "4cb91fa29f92abf88734c54b126c3cb891fb436d",
+        "url": "https://api.github.com/repos/ChenZhangg/autofix/git/trees/4cb91fa29f92abf88734c54b126c3cb891fb436d"
+      },
+      "url": "https://api.github.com/repos/ChenZhangg/autofix/git/commits/5763737b142be255dceb767fbd696b1b53e34b02",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/ChenZhangg/autofix/commits/5763737b142be255dceb767fbd696b1b53e34b02",
+    "html_url": "https://github.com/ChenZhangg/autofix/commit/5763737b142be255dceb767fbd696b1b53e34b02",
+    "comments_url": "https://api.github.com/repos/ChenZhangg/autofix/commits/5763737b142be255dceb767fbd696b1b53e34b02/comments",
+    "author": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "zhangch1991425",
+      "id": 21978916,
+      "node_id": "MDQ6VXNlcjIxOTc4OTE2",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21978916?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zhangch1991425",
+      "html_url": "https://github.com/zhangch1991425",
+      "followers_url": "https://api.github.com/users/zhangch1991425/followers",
+      "following_url": "https://api.github.com/users/zhangch1991425/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zhangch1991425/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zhangch1991425/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zhangch1991425/subscriptions",
+      "organizations_url": "https://api.github.com/users/zhangch1991425/orgs",
+      "repos_url": "https://api.github.com/users/zhangch1991425/repos",
+      "events_url": "https://api.github.com/users/zhangch1991425/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zhangch1991425/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+
+    ]
+  }
+]

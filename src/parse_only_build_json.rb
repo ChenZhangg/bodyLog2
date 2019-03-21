@@ -5,7 +5,7 @@ require 'activerecord-import'
 require 'thread'
 require 'travis'
 require 'date'
-class JavaRepoBuildDatum < ActiveRecord::Base
+class Build < ActiveRecord::Base
   establish_connection(
       adapter:  "mysql",
       host:     "10.131.252.160",
